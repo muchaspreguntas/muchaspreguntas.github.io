@@ -24,7 +24,7 @@ body {
 /* Estilos para el título principal */
 h1 {
   color: #F5F5F5;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', sans-serif;
   font-size: 30px;
   text-align: center;
   letter-spacing: 0px;
@@ -35,7 +35,7 @@ h1 {
 h4 {
   color: #F5F5F5;
   font-size: 15px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', sans-serif;
   border-radius: 0px;
   padding: 5px 10px;
   text-align: center;
@@ -45,7 +45,7 @@ h4 {
 h2 {
   margin-bottom: 10px;
   font-size: 25px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', sans-serif;
   border-radius: 0px;
   padding: 5px 10px;
   cursor: pointer;
@@ -55,12 +55,12 @@ h2 {
 /* Estilos para la categoría de la pregunta */
 h3 {
   font-size: 18px;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', sans-serif;
 }
 
 /* Estilos para las categorías específicas */
 .category {
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Merriweather', sans-serif;
   font-size: 20px;
   font-weight: bold;
 }
@@ -106,8 +106,8 @@ button:hover {
 
 /* Estilos para el footer */
 footer {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #000000;
   padding: 10px;
   text-align: center;
   position: fixed;
@@ -126,4 +126,32 @@ footer {
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+/* Estilos para el logo */
+img {
+  max-height: 50px; /* Ajusta el tamaño del logo según tus preferencias */
+}
+
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+nav a {
+  text-decoration: none;
+  color: #000000; /* Color del texto de los enlaces */
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline; /* Efecto de subrayado al pasar el mouse sobre los enlaces */
+}
+hr {
+  border: 1px solid #000000; /* Puedes ajustar el color de la línea según tu preferencia */
+  width: 100%;
+  margin: 15px 0; /* Espaciado por encima y por debajo de la línea */
 }
