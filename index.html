@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>muchaspreguntas</title>
+
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" type="text/css" href="pregunton_style.css">
+</head>
+
+<body>
+  <!-- Encabezado del cuerpo de la página -->
+  <h1>Pregunton</h1>
+  <h4>Juego de Preguntas para Charlas interesantes</h4>
+
+  <!-- Elemento de audio para el sonido del botón -->
+  <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
+
+  <!-- Contenedor principal de la página -->
+  <div class="container">
+    <!-- Contenedor de la pregunta -->
+    <div id="questionContainer">
+      <!-- Categoría de la pregunta (con clase CSS dinámica) -->
+      <div id="category" class="category economia">Economía</div>
+      <!-- Título de la pregunta -->
+      <h3>Pregunta:</h3>
+      <h2 id="question">¿Cuál es tu perspectiva sobre la desigualdad económica?</h2>
+    </div>
+
+    <!-- Botón para la siguiente pregunta (con llamada a función JavaScript) -->
+    <button onclick="nextQuestion()">Siguiente Pregunta</button>
+  </div>
+
+  <!-- Enlace al archivo de funciones JavaScript -->
+  <script src="pregunton_funciones.js"></script>
+</body>
+</html>

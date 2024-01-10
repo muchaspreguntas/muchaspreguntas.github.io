@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Habla Juego de Preguntas</title>
+  <style>
+  body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #F5F5F5; 
+  padding: 15px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #000000;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 30px; 
+  text-align: center; 
+  letter-spacing: 1px; 
+  margin-bottom: 15px; 
+}
+
+h2 {
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 4px;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
+}
+h3 {
+  font-size: 18px;
+  font-family: 'Roboto Mono', monospace;
+  border-radius: 4px;
+  padding: 8px 20px;
+}
+    .category {
+      font-family: 'Roboto Mono', monospace;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      transition: color 0.3s;
+    }
+
+    .psicologia { color: #3333cc; } /* Color de la categoría Psicología (Azul) */
+    .religion { color: #99004d; } /* Color de la categoría Religión (Violeta) */
+    .politica { color: #ff5733; } /* Color de la categoría Política (Naranja) */
+    .desarrollo { color: #9966ff; } /* Color de la categoría Desarrollo Personal (Morado) */
+    .filosofia { color: #ffcc00; } /* Color de la categoría Filosofía (Amarillo) */
+    .tecnologia { color: #008080; } /* Color de la categoría Tecnología (Turquesa Oscuro) */
+    .historia { color: #0066cc; } /* Color de la categoría Historia (Azul Oscuro) */
+    .economia { color: #b5b800; } /* Color de la categoría Economía */
+    .pareja { color: #d40000; } /* Color de la categoría Pareja */
+    .ciencia { color: #4caf50; } /* Color de la categoría Ciencia */
+    .historias-personales { color: #e64a19; } /* Color de la categoría Historias Personales (Naranja Rojizo) */
+    .miedos { color: #413f3f; } /* Color de la categoría Miedos (Rojo Oscuro) */
+    .amor { color: #ff3399; } /* Color de la categoría Amor (Rosa Oscuro) */
+    .educacion { color: #3399ff; } /* Color de la categoría Educación (Azul Claro) */
+    .negocios { color: #336600; } /* Color de la categoría Negocios (Verde Oscuro) */
+
+
+    button {
+      background-color: #000000;
+      font-family: 'Montserrat', sans-serif;;
+      font-weight: bold;
+      color: #F5F5F5;
+      padding: 10px 30px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 20px;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    button:hover {
+      background-color: #0de914;
+      color: #000000;
+    }
+
+  </style>
+</head>
+<body>
+
+<audio id="audio" src="12audio.mp3"></audio>
+
+<div class="container">
+  <h1>MP - Muchas Preguntas </h1>
+  <h3>Un juego de preguntas fascinantes para charlas interesantes.</h3>
+
+  <div id="questionContainer">
+    <div id="category" class="category economia">Economía</div>
+    <h3>Pregunta:</h3>
+    <h2 id="question">¿Cuál es tu perspectiva sobre la desigualdad económica?</h2>
+  </div>
+
+  <button onclick="nextQuestion()">Siguiente Pregunta</button>
+</div>
+
+<script>
+ const themes = ["economia", "pareja", "ciencia", "psicologia", "religion", "politica", "desarrollo", "filosofia", "tecnologia", "historia",  "historias Personales", "miedos", "amor", "educacion", "negocios", ""];
+
+    
+const questions = {
+    economia: [
+    "1. ¿Cómo crees que la automatización y la inteligencia artificial afectarán el mercado laboral en los próximos años?",
+    "2. Desde tu perspectiva, ¿cuál es el papel de la educación financiera en la toma de decisiones económicas personales?",
+    "3. ¿Qué medidas propondrías para fomentar la inclusión financiera en comunidades con bajos recursos?",
+    "4. ¿Cuál es tu visión sobre el papel del gobierno en la regulación económica?",
+    "5. En tu opinión, ¿cómo pueden las empresas contribuir de manera más efectiva al desarrollo sostenible?",
+    "6. ¿Qué medidas propones para abordar la brecha salarial de género en el ámbito laboral?",
+    "7. ¿Cómo influye la educación en la movilidad económica de las personas?",
+    "8. ¿Cuáles son los desafíos económicos específicos que enfrenta tu comunidad?",
+    "9. ¿Qué importancia le das al comercio justo y cómo puede impactar positivamente en la economía global?",
+    "10. ¿Cómo crees que la tecnología está remodelando el panorama económico y laboral?",
+    "11. Desde tu perspectiva, ¿cuál es el equilibrio adecuado entre la propiedad privada y la intervención gubernamental en la economía?",
+    "12. ¿Cómo la crisis económica global reciente ha cambiado tu percepción sobre la estabilidad financiera?",
+    "13. ¿Cuál es tu opinión sobre la renta básica universal como una solución para abordar la pobreza?",
+    "14. ¿Crees que la economía debería priorizar el crecimiento económico o la sostenibilidad ambiental?",
+    "15. ¿Cuál es tu visión sobre la deuda pública y cómo afecta al desarrollo económico a largo plazo?",
+    "16. ¿Cómo pueden las políticas fiscales y monetarias impactar positivamente en el empleo?",
+    "17. ¿Qué opinas sobre las criptomonedas y su potencial para transformar el sistema financiero tradicional?",
+    "18. ¿Cómo pueden las pequeñas empresas contribuir al desarrollo económico local?",
+    "19. ¿Crees que la globalización económica ha beneficiado a todas las naciones por igual?",
+    "20. ¿Cuál es tu perspectiva sobre la relación entre la salud económica y el bienestar social?",
+    "21. ¿Cuál es tu opinión sobre la participación activa de las empresas en iniciativas sociales y ambientales?",
+    "22. Desde tu perspectiva, ¿cómo los cambios en las tasas de interés pueden afectar la toma de decisiones financieras?",
+    "23. ¿Qué medidas propondrías para fomentar la igualdad de oportunidades económicas?",
+    "24. ¿Cuál es tu visión sobre la responsabilidad social de las empresas en un contexto global?",
+    "25. ¿Cómo las políticas económicas pueden abordar los desafíos de la pobreza y la desigualdad?",
+    "26. Desde tu experiencia, ¿cómo la innovación tecnológica puede impulsar el crecimiento económico?",
+    "27. ¿Qué impacto crees que tiene la globalización en la distribución de la riqueza?",
+    "28. ¿Cuál es tu opinión sobre el uso de impuestos para redistribuir la riqueza?",
+    "29. ¿Cómo pueden las políticas de comercio internacional afectar a las pequeñas y medianas empresas?",
+    "30. Desde tu perspectiva, ¿cómo se pueden abordar los desafíos económicos derivados del cambio climático?",
+    "31. ¿Qué medidas propondrías para incentivar la inversión en sectores sostenibles?",
+    "32. ¿Cómo la economía colaborativa está cambiando la forma en que entendemos el empleo y los servicios?",
+    "33. ¿Qué impacto crees que tiene la deuda estudiantil en la movilidad económica de las personas?",
+    "34. ¿Cuál es tu opinión sobre la renta universal frente a la renta básica?",
+    "35. ¿Cómo la economía digital está transformando las formas tradicionales de negocios?",
+    "36. Desde tu perspectiva, ¿cuál es el papel de las instituciones financieras en el desarrollo económico?",
+    "37. ¿Qué medidas propondrías para estimular la innovación en las pequeñas y medianas empresas?",
+    "38. ¿Cómo la inteligencia artificial puede afectar la demanda de empleo en diversas industrias?",
+    "39. ¿Cuál es tu visión sobre la relación entre el acceso a la educación y el crecimiento económico?",
+    "40. ¿Qué impacto crees que tiene la automatización en la distribución del ingreso?",
+    "41. ¿Cómo las políticas de comercio internacional pueden abordar la explotación laboral?",
+    "42. Desde tu experiencia, ¿cómo la economía circular puede promover la sostenibilidad?",
+    "43. ¿Cuál es tu opinión sobre la regulación de las criptomonedas para prevenir actividades ilícitas?",
+    "44. ¿Cómo las políticas de incentivos fiscales pueden estimular la inversión extranjera directa?",
+    "45. ¿Qué medidas propondrías para mejorar la educación financiera en la población?",
+    "46. ¿Cuál es tu visión sobre el papel de los sindicatos en la protección de los derechos laborales?",
+    "47. ¿Cómo la economía de la experiencia está afectando a las industrias tradicionales?",
+    "48. Desde tu perspectiva, ¿cómo pueden las políticas de vivienda influir en la estabilidad económica?",
+    "49. ¿Cuál es tu opinión sobre el uso de aranceles como medida para proteger la industria nacional?",
+    "50. ¿Cómo las políticas de inversión en infraestructuras pueden estimular el crecimiento económico?",
+    "51. ¿Qué impacto crees que tienen las crisis financieras en la confianza de los consumidores?",
+    "52. ¿Cuál es tu visión sobre el desarrollo de monedas digitales emitidas por bancos centrales?",
+    "53. ¿Cómo las políticas de inclusión financiera pueden beneficiar a comunidades desfavorecidas?",
+    "54. Desde tu experiencia, ¿cómo la movilidad social puede ser promovida a través de políticas económicas?",
+    "55. ¿Qué medidas propondrías para abordar la evasión fiscal a nivel internacional?",
+    "56. ¿Cómo las políticas de protección del medio ambiente pueden influir en la competitividad económica?",
+    "57. ¿Cuál es tu opinión sobre la implementación de impuestos sobre el carbono?",
+    "58. ¿Cómo la economía de la atención impacta en los modelos de negocio y la sociedad?",
+    "59. Desde tu perspectiva, ¿cómo los acuerdos comerciales pueden afectar a los trabajadores?",
+    "60. ¿Qué medidas propondrías para abordar los desafíos económicos derivados de la migración?"
+  ],
+
+};
+
+
+
+  const audioUrl = "12audio.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
+
+  function nextQuestion() {
+    const randomThemeIndex = Math.floor(Math.random() * themes.length);
+    const randomTheme = themes[randomThemeIndex];
+    const randomQuestionIndex = Math.floor(Math.random() * questions[randomTheme].length);
+
+    // Muestra la categoría y la pregunta en el contenedor
+    const categoryElement = document.getElementById('category');
+    const questionElement = document.getElementById('question');
+
+    categoryElement.className = `category ${randomTheme}`;
+    categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
+    
+    questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
+    questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+
+    // Reproduce el audio
+    playAudio();
+  }
+
+  function playAudio() {
+    const audio = new Audio(audioUrl);
+    audio.play();
+  }
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  // Llama a nextQuestion() al cargar la página para mostrar la primera pregunta
+  nextQuestion();
+</script>
+
+</body>
+</html>
