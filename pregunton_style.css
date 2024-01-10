@@ -24,7 +24,7 @@ body {
 /* Estilos para el título principal */
 h1 {
   color: #F5F5F5;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;;
   font-size: 30px;
   text-align: center;
   letter-spacing: 0px;
@@ -35,7 +35,7 @@ h1 {
 h4 {
   color: #F5F5F5;
   font-size: 15px;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;;
   border-radius: 0px;
   padding: 5px 10px;
   text-align: center;
@@ -45,7 +45,7 @@ h4 {
 h2 {
   margin-bottom: 10px;
   font-size: 25px;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;;
   border-radius: 0px;
   padding: 5px 10px;
   cursor: pointer;
@@ -55,12 +55,12 @@ h2 {
 /* Estilos para la categoría de la pregunta */
 h3 {
   font-size: 18px;
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;;
 }
 
 /* Estilos para las categorías específicas */
 .category {
-  font-family: 'Merriweather', sans-serif;
+  font-family: 'Merriweather', sans-serif;;
   font-size: 20px;
   font-weight: bold;
 }
