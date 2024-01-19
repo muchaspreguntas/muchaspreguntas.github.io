@@ -395,3 +395,7 @@ function playAudio() {
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
+
+document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('show');
+});

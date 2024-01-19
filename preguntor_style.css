@@ -159,3 +159,69 @@ hr {
   width: 100%;
   margin: 15px 0; /* Espaciado por encima y por debajo de la línea */
 }
+
+
+/*header*/
+
+header {
+  background-color: #333;
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Ocultar el icono del menú en pantallas grandes */
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+}
