@@ -164,12 +164,17 @@ hr {
 /*header*/
 
 header {
-  background-color: #333;
-  padding: 20px;
-  color: white;
+  background-color: #ffffff;
+  padding: 10px;
+  color: #000000;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  animation: fadeInUp 0.5s ease-out;
+  font-size: 10px;
+  font-family:  'Playfair Display', serif;
+
 }
 
 .logo-container img {
@@ -207,7 +212,7 @@ nav {
     top: 60px;
     left: 0;
     width: 100%;
-    background-color: #333;
+    background-color: #ffffff;
     z-index: 1;
   }
 
