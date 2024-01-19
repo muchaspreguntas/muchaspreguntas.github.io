@@ -10,39 +10,6 @@ body {
   height: 300vh;
 }
 
-/* Estilos básicos del header */
-header {
-  background-color: #f2f2f2;
-  padding: 20px;
-  text-align: center;
-}
-
-/* Estilos para dispositivos móviles */
-@media screen and (max-width: 600px) {
-  header {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  nav {
-    margin-top: 20px;
-  }
-}
-
-/* Estilos para PC */
-@media screen and (min-width: 601px) {
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  nav {
-    display: flex;
-    align-items: center;
-  }
-}
-
 /* Estilos para el contenedor principal */
 .container {
   background-color: #FFFFFF;
