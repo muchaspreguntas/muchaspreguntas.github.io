@@ -168,22 +168,24 @@ header {
   padding: 10px;
   color: #000000;
   display: flex;
-  justify-content: center; /* Alinea los elementos en el centro horizontal */
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   animation: fadeInUp 0.5s ease-out;
   font-size: 15px;
+  font-family:  'Playfair Display', serif;
+
 }
 
 .logo-container img {
   max-width: 100%;
   height: auto;
+  margin-right: 10px;
 }
 
 nav {
   display: flex;
-  justify-content: center; /* Alinea los elementos en el centro horizontal */
-  flex-grow: 1; /* El menú ocupa el espacio restante */
+  align-items: center;
 }
 
 .nav-links {
@@ -194,15 +196,39 @@ nav {
 }
 
 .nav-links li {
-  margin-right: 20px;
+  margin-right: 10px;
 }
+
 
 .menu-icon {
   font-size: 24px;
   cursor: pointer;
-  display: none;
+  display: none; /* Ocultar el icono del menú en pantallas grandes */
 }
 
 @media only screen and (max-width: 768px) {
-  /* ... (mismo código para la versión móvil) */
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 1;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin-right: 0;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
