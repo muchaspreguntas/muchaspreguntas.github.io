@@ -367,19 +367,19 @@ const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta 
 
 // Función para mostrar la siguiente pregunta
 function nextQuestion() {
-  const randomThemeIndex = Math.floor(Math.random() * themes.length);
-  const randomTheme = themes[randomThemeIndex];
-  const randomQuestionIndex = Math.floor(Math.random() * questions[randomTheme].length);
+  const selectedTheme = document.getElementById('themeSelect').value;
+  const randomQuestionIndex = Math.floor(Math.random() * questions[selectedTheme].length);
 
-  // Muestra la categoría y la pregunta en el contenedor
   const categoryElement = document.getElementById('category');
   const questionElement = document.getElementById('question');
 
-  categoryElement.className = `category ${randomTheme}`;
-  categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
+  categoryElement.className = `category ${selectedTheme}`;
+  categoryElement.innerHTML = capitalizeFirstLetter(selectedTheme);
 
-  questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
+  questionElement.innerHTML = questions[selectedTheme][randomQuestionIndex];
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+
+  
 
   // Reproduce el audio
   playAudio();
