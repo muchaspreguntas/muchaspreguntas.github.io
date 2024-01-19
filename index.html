@@ -11,13 +11,6 @@
 </head>
 
 <body>
-  <label for="themeSelect">Selecciona un tema:</label>
-<select id="themeSelect">
-  <option value="economia">Economía</option>
-  <option value="pareja">Pareja</option>
-  <!-- Agrega opciones para otros temas -->
-</select>
-
   <header>
     <div class="logo-container">
       <img src="logo.png" alt="Logo de tu sitio">
@@ -39,7 +32,6 @@
   <!-- Encabezado del cuerpo de la página -->
   <h1>Preguntor</h1>
   <h4>Juego de Preguntas para Charlas interesantes</h4>
-
   <!-- Elemento de audio para el sonido del botón -->
   <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
 
@@ -48,6 +40,25 @@
     <!-- Contenedor de la pregunta -->
     <div id="questionContainer">
       <!-- Categoría de la pregunta (con clase CSS dinámica) -->
+      <label for="themeSelect">Selecciona un tema:</label>
+      <select id="themeSelect">
+        <option value="economia">Economía</option>
+        <option value="pareja">Pareja</option>
+        <option value="ciencia">Ciencia</option>
+        <option value="psicologia">Psicología</option>
+        <option value="religion">Religión</option>
+        <option value="politica">Política</option>
+        <option value="desarrollo">Desarrollo</option>
+        <option value="filosofia">Filosofía</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="historia">Historia</option>
+        <option value="historias-personales">Historias Personales</option>
+        <option value="miedos">Miedos</option>
+        <option value="amor">Amor</option>
+        <option value="educacion">Educación</option>
+        <option value="negocios">Negocios</option>
+        <option value="etica">Ética</option>
+      </select>
       <div id="category" class="category economia">Economía</div>
       <!-- Título de la pregunta -->
       <h3>Pregunta:</h3>
