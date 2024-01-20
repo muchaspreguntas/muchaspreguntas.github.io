@@ -120,7 +120,7 @@ button:hover {
   font-weight: bold;
   color: #000000;
   padding: 10px 20px;
-  border: 2px #000000;
+  border: 2px solid #000000; /* Cambiado para especificar el tipo de borde */
   border-radius: 4px;
   cursor: pointer;
   font-size: 12px;
@@ -131,7 +131,7 @@ button:hover {
 
 /* Estilo para el botón y el menú desplegable al pasar el ratón */
 #themeSelectButton:hover, #themeSelect:hover {
-  background-color: #0de914;
+  background-color: #ffffff;
   color: #000000;
   border-color: #00ff00;
 }
