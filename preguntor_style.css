@@ -124,8 +124,8 @@ button:hover {
   border-radius: 4px;
   cursor: pointer;
   font-size: 12px;
-  margin-top: 15px; /* Espacio en la parte superior */
-  margin-bottom: 15px; /* Espacio en la parte inferior */
+  margin-top: 20px; /* Espacio en la parte superior */
+  margin-bottom: 20px; /* Espacio en la parte inferior */
   text-align: center;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
