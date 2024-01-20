@@ -115,16 +115,16 @@ button:hover {
 
 /* Estilo para el botón de selección de tema y para el menú desplegable */
 #themeSelectButton, #themeSelect {
-  background-color: #000000;
+  background-color: #ffffff;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
-  color: #ffffff;
-  padding: 10px 30px;
-  border: 2px solid transparent;
+  color: #000000;
+  padding: 10px 20px;
+  border: 2px #000000;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
+  font-size: 12px;
+  margin-top: 15px;
   text-align: center;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
