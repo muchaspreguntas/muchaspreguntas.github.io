@@ -113,8 +113,8 @@ button:hover {
   text-align: center;
 }
 
-/* Estilo para el botón de selección de tema */
-button#themeSelectButton {
+/* Estilo para el botón de selección de tema y para el menú desplegable */
+#themeSelectButton, #themeSelect {
   background-color: #000000;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
@@ -125,27 +125,15 @@ button#themeSelectButton {
   cursor: pointer;
   font-size: 16px;
   margin-top: 20px;
+  text-align: center;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Estilo para el botón de selección de tema al pasar el ratón */
-button#themeSelectButton:hover {
+/* Estilo para el botón y el menú desplegable al pasar el ratón */
+#themeSelectButton:hover, #themeSelect:hover {
   background-color: #0de914;
   color: #000000;
   border-color: #00ff00;
-}
-
-/* Estilo para la lista desplegable */
-#themeSelect {
-  background-color: #ffffff;
-  font-family: 'Playfair Display', serif;
-  font-size: 15px;
-  color: #000000;
-  padding: 10px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-top: 20px;
 }
 
 /* Estilo para el menú desplegable */
