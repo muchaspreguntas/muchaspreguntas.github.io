@@ -365,30 +365,29 @@ const questions = {
 // Ruta del archivo de audio
 const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
 
-// Obtiene los elementos del DOM
-const themeSelect = document.getElementById('themeSelect');
-const selectedThemeElement = document.getElementById('selectedTheme');
+// Función para mostrar la siguiente pregunta
+function nextQuestion() {
+  const selectedTheme = document.getElementById('themeSelect').value;
 
-// Obtiene el tema seleccionado del menú desplegable
-const selectedTheme = themeSelect.value;
-const randomQuestionIndex = Math.floor(Math.random() * questions[selectedTheme].length);
+  // Verifica si se seleccionó 'todos'
+  const themesToSelect = selectedTheme === 'todos' ? themes : [selectedTheme];
 
-// Obtiene elementos para mostrar la pregunta y la categoría
-const categoryElement = document.getElementById('category');
-const questionElement = document.getElementById('question');
+  // Selecciona aleatoriamente un tema
+  const randomThemeIndex = Math.floor(Math.random() * themesToSelect.length);
+  const randomTheme = themesToSelect[randomThemeIndex];
 
-// Actualiza la clase y el contenido de la categoría según el tema seleccionado
-categoryElement.className = `category ${selectedTheme}`;
-categoryElement.innerHTML = capitalizeFirstLetter(selectedTheme);
+  // Selecciona aleatoriamente una pregunta del tema elegido
+  const randomQuestionIndex = Math.floor(Math.random() * questions[randomTheme].length);
 
-// Muestra una pregunta aleatoria del tema seleccionado
-questionElement.innerHTML = questions[selectedTheme][randomQuestionIndex];
-questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+  // Muestra la categoría y la pregunta en el contenedor
+  const categoryElement = document.getElementById('category');
+  const questionElement = document.getElementById('question');
 
-// Actualiza la sección de tema seleccionado en el DOM
-selectedThemeElement.textContent = `Tema seleccionado: ${capitalizeFirstLetter(selectedTheme)}`;
-});
-  
+  categoryElement.className = `category ${randomTheme}`;
+  categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
+
+  questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
+  questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
   // Reproduce el audio
   playAudio();
