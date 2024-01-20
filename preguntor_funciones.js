@@ -225,7 +225,7 @@ const questions = {
       "19. ¿Qué aspectos de la historia mundial te gustaría explorar más a fondo?",
       "20. ¿Cuál es tu percepción sobre la relación entre la historia y la evolución de la tecnología?",
 ],
-    Vivencias: [
+    vivencias: [
       "1. ¿Cuál fue un momento decisivo en tu vida que cambió la forma en que te percibes a ti mismo?",
       "2. ¿Puedes compartir una experiencia que haya desafiado tus creencias fundamentales?",
       "3. ¿Cómo has superado un obstáculo significativo y qué aprendizajes obtuviste de esa experiencia?",
