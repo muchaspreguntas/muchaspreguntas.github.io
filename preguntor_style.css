@@ -105,6 +105,44 @@ button:hover {
   color: #000000;
 }
 
+/* Estilo para la lista desplegable */
+#themeSelect {
+  background-color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-size: 15px;
+  color: #000000;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Estilo para el botón de selección de tema */
+button#themeSelectButton {
+  background-color: #000000;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Estilos adicionales para centrar la lista desplegable y el botón */
+.center-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+
 /* Estilos para el footer */
 footer {
   background-color: #ffffff;
@@ -225,3 +263,4 @@ header {
     display: block;
   }
 }
+
