@@ -365,20 +365,29 @@ const questions = {
 // Ruta del archivo de audio
 const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
 
-// Función para mostrar la siguiente pregunta
-function nextQuestion() {
-  const selectedTheme = document.getElementById('themeSelect').value;
-  const randomQuestionIndex = Math.floor(Math.random() * questions[selectedTheme].length);
+// Obtiene los elementos del DOM
+const themeSelect = document.getElementById('themeSelect');
+const selectedThemeElement = document.getElementById('selectedTheme');
 
-  const categoryElement = document.getElementById('category');
-  const questionElement = document.getElementById('question');
+// Obtiene el tema seleccionado del menú desplegable
+const selectedTheme = themeSelect.value;
+const randomQuestionIndex = Math.floor(Math.random() * questions[selectedTheme].length);
 
-  categoryElement.className = `category ${selectedTheme}`;
-  categoryElement.innerHTML = capitalizeFirstLetter(selectedTheme);
+// Obtiene elementos para mostrar la pregunta y la categoría
+const categoryElement = document.getElementById('category');
+const questionElement = document.getElementById('question');
 
-  questionElement.innerHTML = questions[selectedTheme][randomQuestionIndex];
-  questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+// Actualiza la clase y el contenido de la categoría según el tema seleccionado
+categoryElement.className = `category ${selectedTheme}`;
+categoryElement.innerHTML = capitalizeFirstLetter(selectedTheme);
 
+// Muestra una pregunta aleatoria del tema seleccionado
+questionElement.innerHTML = questions[selectedTheme][randomQuestionIndex];
+questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+
+// Actualiza la sección de tema seleccionado en el DOM
+selectedThemeElement.textContent = `Tema seleccionado: ${capitalizeFirstLetter(selectedTheme)}`;
+});
   
 
   // Reproduce el audio
