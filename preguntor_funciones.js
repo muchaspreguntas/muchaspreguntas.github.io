@@ -433,3 +433,20 @@ var lastScrollTop = 0;
 
     lastScrollTop = st;
   });
+
+  var lastScrollTopHeader = 0;
+
+  window.addEventListener('scroll', function() {
+    var stHeader = window.pageYOffset || document.documentElement.scrollTop;
+    var header = document.querySelector('header');
+
+    if (stHeader > lastScrollTopHeader) {
+      // Scrolling down, hide the header
+      header.classList.add('hidden');
+    } else {
+      // Scrolling up, show the header
+      header.classList.remove('hidden');
+    }
+
+    lastScrollTopHeader = stHeader;
+  });

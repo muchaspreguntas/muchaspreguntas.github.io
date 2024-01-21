@@ -158,6 +158,10 @@ button:hover {
   padding: 10px;
 }
 
+header.hidden {
+  transform: translateY(-100%);
+}
+
 
 /* Estilos para el footer */
 footer {
