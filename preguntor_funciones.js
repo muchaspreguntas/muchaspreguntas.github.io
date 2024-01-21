@@ -422,3 +422,10 @@ function playAudio(audioUrl) {
   const audio = new Audio(audioUrl);
   audio.play();
 }
+
+function vibrateDevice() {
+  // Verifica si el navegador admite la API de vibración
+  if ('vibrate' in navigator) {
+    navigator.vibrate([200]); // Vibra durante 200 milisegundos
+  }
+}
