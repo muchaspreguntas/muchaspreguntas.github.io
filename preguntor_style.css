@@ -171,6 +171,12 @@ footer {
   font-size: 10px;
   font-family: 'Playfair Display', serif;
 }
+
+/* Estilo adicional para ocultar el footer */
+footer.hidden {
+  display: none;
+}
+
 /* Animación de entrada */
 @keyframes fadeInUp {
   from {
