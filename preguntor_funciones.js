@@ -361,8 +361,6 @@ const questions = {
 };
 
 
-// ...
-
 // Función para mostrar la siguiente pregunta y vibrar el dispositivo
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
@@ -387,8 +385,8 @@ function nextQuestion() {
   questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
-  // Reproduce el audio
-  playAudio();
+  // Reproduce el audio del tema
+  playAudio('tema_audio.mp3');
 
   // Vibra el dispositivo (requiere permisos del usuario)
   vibrateDevice();
@@ -396,8 +394,11 @@ function nextQuestion() {
 
 // ...
 
-// Evento de clic en el botón de siguiente pregunta
-document.getElementById('nextButton').addEventListener('click', nextQuestion);
+// Función para reproducir el audio
+function playAudio(audioSrc) {
+  const audio = new Audio(audioSrc);
+  audio.play();
+}
 
 // Función para vibrar el dispositivo
 function vibrateDevice() {
@@ -407,5 +408,5 @@ function vibrateDevice() {
   }
 }
 
-// ...
-
+// Evento de clic en el botón de siguiente pregunta
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
