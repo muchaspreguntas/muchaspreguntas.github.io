@@ -361,7 +361,11 @@ const questions = {
 };
 
 
-// Función para mostrar la siguiente pregunta y vibrar el dispositivo
+
+// Ruta del archivo de audio
+const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
+
+// Función para mostrar la siguiente pregunta
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
 
@@ -385,28 +389,21 @@ function nextQuestion() {
   questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
-  // Reproduce el audio del tema
-  playAudio('tema_audio.mp3');
-
-  // Vibra el dispositivo (requiere permisos del usuario)
-  vibrateDevice();
+  // Reproduce el audio
+  playAudio();
 }
 
-// ...
-
 // Función para reproducir el audio
-function playAudio(audioSrc) {
-  const audio = new Audio(audioSrc);
+function playAudio() {
+  const audio = new Audio(audioUrl);
   audio.play();
 }
 
-// Función para vibrar el dispositivo
-function vibrateDevice() {
-  // Verifica si el navegador admite la API de vibración y si el usuario ha concedido permisos
-  if ('vibrate' in navigator && window.location.protocol === 'https:') {
-    navigator.vibrate([200]); // Vibra durante 200 milisegundos
-  }
+// Función para capitalizar la primera letra de una cadena
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-// Evento de clic en el botón de siguiente pregunta
-document.getElementById('nextButton').addEventListener('click', nextQuestion);
+document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
