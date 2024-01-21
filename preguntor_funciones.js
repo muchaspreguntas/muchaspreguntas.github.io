@@ -360,7 +360,7 @@ const questions = {
     
 };
 
-// ...Funciona aqui normal
+// ...
 
 // Función para mostrar la siguiente pregunta y vibrar el dispositivo
 function nextQuestion() {
@@ -387,27 +387,6 @@ function nextQuestion() {
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
   // Reproduce el audio
-  playAudio('tema_audio.mp3');
+  playAudio('audio_boton_siguiente.mp3');
 
-  // Vibra el dispositivo (requiere permisos del usuario)
-  vibrateDevice();
 }
-
-// ...
-
-// Evento de clic en el botón de siguiente pregunta
-document.getElementById('nextButton').addEventListener('click', nextQuestion);
-
-// Evento de clic en el botón de cambiar tema
-document.getElementById('changeThemeButton').addEventListener('click', function() {
-  // Puedes agregar aquí el código para cambiar de tema si es necesario
-  // ...
-
-  // Reproduce el audio del tema
-  playAudio('tema_audio.mp3');
-
-  // Vibra el dispositivo (requiere permisos del usuario)
-  vibrateDevice();
-});
-
-// ...
