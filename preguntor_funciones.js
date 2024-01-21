@@ -360,24 +360,11 @@ const questions = {
     
 };
 
-// ...
-
-// Evento de clic en el botón de siguiente pregunta
-document.getElementById('nextButton').addEventListener('click', function() {
-  nextQuestion();
-  playAudio('audio_boton_siguiente.mp3');
-});
-
-// Evento de clic en el botón de cambiar tema
-document.getElementById('changeThemeButton').addEventListener('click', function() {
-  changeTheme();
-  playAudio('tema_audio.mp3');
-});
 
 // ...
 
-// Función para cambiar de tema
-function changeTheme() {
+// Función para mostrar la siguiente pregunta y vibrar el dispositivo
+function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
 
   // Verifica si se seleccionó 'todos'
@@ -387,22 +374,38 @@ function changeTheme() {
   const randomThemeIndex = Math.floor(Math.random() * themesToSelect.length);
   const randomTheme = themesToSelect[randomThemeIndex];
 
-  // Muestra la categoría en el contenedor
+  // Selecciona aleatoriamente una pregunta del tema elegido
+  const randomQuestionIndex = Math.floor(Math.random() * questions[randomTheme].length);
+
+  // Muestra la categoría y la pregunta en el contenedor
   const categoryElement = document.getElementById('category');
+  const questionElement = document.getElementById('question');
+
   categoryElement.className = `category ${randomTheme}`;
   categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
+
+  questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
+  questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
+
+  // Reproduce el audio
+  playAudio();
 
   // Vibra el dispositivo (requiere permisos del usuario)
   vibrateDevice();
 }
 
-// Función para reproducir audio
-function playAudio(audioFileName) {
-  const audioUrl = audioFileName;
-  const audio = new Audio(audioUrl);
-  audio.play();
+// ...
+
+// Evento de clic en el botón de siguiente pregunta
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
+
+// Función para vibrar el dispositivo
+function vibrateDevice() {
+  // Verifica si el navegador admite la API de vibración y si el usuario ha concedido permisos
+  if ('vibrate' in navigator && window.location.protocol === 'https:') {
+    navigator.vibrate([200]); // Vibra durante 200 milisegundos
+  }
 }
 
 // ...
 
-// ...
