@@ -360,9 +360,13 @@ const questions = {
     
 };
 
-// AQUI FUNCIONA
 // Ruta del archivo de audio
 const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
+
+// Función para capitalizar la primera letra de una cadena
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
 
 // Función para mostrar la siguiente pregunta
 function nextQuestion() {
@@ -390,6 +394,9 @@ function nextQuestion() {
 
   // Reproduce el audio
   playAudio();
+
+  // Vibra el dispositivo (requiere permisos del usuario)
+  vibrateDevice();
 }
 
 // Función para reproducir el audio
@@ -398,9 +405,12 @@ function playAudio() {
   audio.play();
 }
 
-// Función para capitalizar la primera letra de una cadena
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
+// Función para vibrar el dispositivo
+function vibrateDevice() {
+  // Verifica si el navegador admite la API de vibración y si el usuario ha concedido permisos
+  if ('vibrate' in navigator && window.location.protocol === 'https:') {
+    navigator.vibrate([200]); // Vibra durante 200 milisegundos
+  }
 }
 
 document.querySelector('.menu-icon').addEventListener('click', function() {
