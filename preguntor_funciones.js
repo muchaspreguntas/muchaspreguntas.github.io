@@ -360,11 +360,10 @@ const questions = {
     
 };
 
-// AQUI FUNCIONA
 // Ruta del archivo de audio
 const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
 
-// Función para mostrar la siguiente pregunta
+// Función para mostrar la siguiente pregunta y vibrar el dispositivo
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
 
@@ -390,6 +389,9 @@ function nextQuestion() {
 
   // Reproduce el audio
   playAudio();
+
+  // Vibra el dispositivo (si es posible)
+  vibrateDevice();
 }
 
 // Función para reproducir el audio
@@ -401,6 +403,22 @@ function playAudio() {
 // Función para capitalizar la primera letra de una cadena
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+// Evento de clic en el botón de siguiente pregunta
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
+
+// Función para vibrar el dispositivo
+function vibrateDevice() {
+  try {
+    // Verifica si el navegador admite la API de vibración
+    if ('vibrate' in navigator) {
+      // Vibra durante 200 milisegundos
+      navigator.vibrate([200]);
+    }
+  } catch (error) {
+    console.error('Error al vibrar el dispositivo:', error);
+  }
 }
 
 document.querySelector('.menu-icon').addEventListener('click', function() {
