@@ -362,10 +362,12 @@ const questions = {
 
 
 
-// Ruta del archivo de audio
-const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
+// Ruta del archivo de audio para el tema
+const temaAudioUrl = "tema_audio.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio del tema
 
-// Función para mostrar la siguiente pregunta
+// ...
+
+// Función para mostrar la siguiente pregunta y vibrar el dispositivo
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
 
@@ -389,21 +391,34 @@ function nextQuestion() {
   questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
-  // Reproduce el audio
-  playAudio();
+  // Reproduce el audio del tema
+  playAudio(temaAudioUrl);
+
+  // Vibra el dispositivo (requiere permisos del usuario)
+  vibrateDevice();
 }
 
+// ...
+
+// Evento de clic en el botón de siguiente pregunta
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
+
+// Evento de clic en el botón de cambiar tema
+document.getElementById('changeThemeButton').addEventListener('click', function() {
+  // Puedes agregar aquí el código para cambiar de tema si es necesario
+  // ...
+
+  // Reproduce el audio del tema
+  playAudio(temaAudioUrl);
+
+  // Vibra el dispositivo (requiere permisos del usuario)
+  vibrateDevice();
+});
+
+// ...
+
 // Función para reproducir el audio
-function playAudio() {
+function playAudio(audioUrl) {
   const audio = new Audio(audioUrl);
   audio.play();
 }
-
-// Función para capitalizar la primera letra de una cadena
-function capitalizeFirstLetter(string) {
-  return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-document.querySelector('.menu-icon').addEventListener('click', function() {
-  document.querySelector('.nav-links').classList.toggle('show');
-});
