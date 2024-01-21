@@ -23,7 +23,8 @@ const questions = {
       "17. ¿Qué opinas sobre las criptomonedas y su potencial para transformar el sistema financiero tradicional?",
       "18. ¿Cómo pueden las pequeñas empresas contribuir al desarrollo económico local?",
       "19. ¿Crees que la globalización económica ha beneficiado a todas las naciones por igual?",
-      "20. ¿Cuál es tu perspectiva sobre la relación entre la salud económica y el bienestar social?"
+      "20. ¿Cuál es tu perspectiva sobre la relación entre la salud económica y el bienestar social?",
+      "21. Analiza las distintas perspectivas sobre las razones económicas detrás del declive del socialismo en Venezuela. ¿Cómo la gestión económica, políticas fiscales y decisiones gubernamentales impactaron en el resultado final? - Hecha Por Kristian Martinez Colina",
     ],
     pareja: [
       "1. Más allá de las cualidades superficiales, ¿cuáles son los valores fundamentales que buscas en una pareja?",
