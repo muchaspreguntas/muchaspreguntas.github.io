@@ -159,6 +159,7 @@ button:hover {
 }
 
 
+/* Estilos para el footer */
 footer {
   background-color: #ffffff;
   color: #000000;
@@ -170,12 +171,14 @@ footer {
   animation: fadeInUp 0.5s ease-out;
   font-size: 10px;
   font-family: 'Playfair Display', serif;
+  transition: transform 0.5s ease-out; /* Agregamos una transición para suavizar el efecto */
 }
 
-/* Estilo adicional para ocultar el footer */
+/* Agregamos una clase para ocultar el footer */
 footer.hidden {
-  display: none;
+  transform: translateY(100%);
 }
+
 
 /* Animación de entrada */
 @keyframes fadeInUp {
