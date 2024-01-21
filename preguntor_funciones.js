@@ -360,8 +360,6 @@ const questions = {
     
 };
 
-// ...
-
 // Función para mostrar la siguiente pregunta y vibrar el dispositivo
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
@@ -393,10 +391,12 @@ function nextQuestion() {
   vibrateDevice();
 }
 
-// ...
-
 // Evento de clic en el botón de siguiente pregunta
-document.getElementById('nextButton').addEventListener('click', nextQuestion);
+const nextButton = document.getElementById('nextButton');
+nextButton.addEventListener('click', function() {
+  nextQuestion();
+  vibrateDevice(); // Vibra el dispositivo inmediatamente después de mostrar la pregunta
+});
 
 // Función para vibrar el dispositivo
 function vibrateDevice() {
@@ -405,6 +405,3 @@ function vibrateDevice() {
     navigator.vibrate([200]); // Vibra durante 200 milisegundos
   }
 }
-
-// ...
-
