@@ -365,13 +365,13 @@ const questions = {
 // Evento de clic en el botón de siguiente pregunta
 document.getElementById('nextButton').addEventListener('click', function() {
   nextQuestion();
-  playNextButtonSound();
+  playAudio('audio_boton_siguiente.mp3');
 });
 
 // Evento de clic en el botón de cambiar tema
 document.getElementById('changeThemeButton').addEventListener('click', function() {
   changeTheme();
-  playThemeChangeSound();
+  playAudio('tema_audio.mp3');
 });
 
 // ...
@@ -392,21 +392,15 @@ function changeTheme() {
   categoryElement.className = `category ${randomTheme}`;
   categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
 
-  // Reproduce el audio
-  playAudio('tema_audio.mp3');
-
   // Vibra el dispositivo (requiere permisos del usuario)
   vibrateDevice();
 }
 
-// Función para reproducir el sonido del botón de siguiente pregunta
-function playNextButtonSound() {
-  playAudio('audio_boton_siguiente.mp3');
-}
-
-// Función para reproducir el sonido del cambio de tema
-function playThemeChangeSound() {
-  playAudio('tema_audio.mp3');
+// Función para reproducir audio
+function playAudio(audioFileName) {
+  const audioUrl = audioFileName;
+  const audio = new Audio(audioUrl);
+  audio.play();
 }
 
 // ...
