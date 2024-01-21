@@ -391,19 +391,24 @@ function nextQuestion() {
   vibrateDevice();
 }
 
-// ...
-
 // Función para reproducir el audio
 function playAudio(audioSrc) {
-  const audio = new Audio(audioSrc);
-  audio.play();
+  try {
+    const audio = new Audio(audioSrc);
+    audio.play();
+  } catch (error) {
+    console.error('Error al reproducir audio:', error);
+  }
 }
 
 // Función para vibrar el dispositivo
 function vibrateDevice() {
-  // Verifica si el navegador admite la API de vibración y si el usuario ha concedido permisos
-  if ('vibrate' in navigator && window.location.protocol === 'https:') {
-    navigator.vibrate([200]); // Vibra durante 200 milisegundos
+  try {
+    if ('vibrate' in navigator && window.location.protocol === 'https:') {
+      navigator.vibrate([200]);
+    }
+  } catch (error) {
+    console.error('Error al vibrar el dispositivo:', error);
   }
 }
 
