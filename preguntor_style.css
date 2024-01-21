@@ -171,7 +171,7 @@ footer {
   animation: fadeInUp 0.5s ease-out;
   font-size: 10px;
   font-family: 'Playfair Display', serif;
-  transition: transform 0.5s ease-out; /* Agregamos una transición para suavizar el efecto */
+  transition: transform 0.5s ease-out;
 }
 
 /* Agregamos una clase para ocultar el footer */

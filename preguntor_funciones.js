@@ -416,3 +416,20 @@ function vibrateDevice() {
 document.querySelector('.menu-icon').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('show');
 });
+
+var lastScrollTop = 0;
+
+  window.addEventListener('scroll', function() {
+    var st = window.pageYOffset || document.documentElement.scrollTop;
+    var footer = document.querySelector('footer');
+
+    if (st > lastScrollTop) {
+      // Scrolling down, hide the footer
+      footer.style.transform = 'translateY(100%)';
+    } else {
+      // Scrolling up, show the footer
+      footer.style.transform = 'translateY(0)';
+    }
+
+    lastScrollTop = st;
+  });
