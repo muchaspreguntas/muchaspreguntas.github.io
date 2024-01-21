@@ -361,7 +361,6 @@ const questions = {
 };
 
 
-
 // Ruta del archivo de audio
 const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
 
