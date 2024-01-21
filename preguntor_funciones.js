@@ -360,7 +360,10 @@ const questions = {
     
 };
 
-// Función para mostrar la siguiente pregunta y vibrar el dispositivo
+// Ruta del archivo de audio
+const audioUrl = "audio_boton_siguiente.mp3"; // Reemplaza con la ruta correcta de tu archivo de audio
+
+// Función para mostrar la siguiente pregunta
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
 
@@ -391,12 +394,11 @@ function nextQuestion() {
   vibrateDevice();
 }
 
-// Evento de clic en el botón de siguiente pregunta
-const nextButton = document.getElementById('nextButton');
-nextButton.addEventListener('click', function() {
-  nextQuestion();
-  vibrateDevice(); // Vibra el dispositivo inmediatamente después de mostrar la pregunta
-});
+// Función para reproducir el audio
+function playAudio() {
+  const audio = new Audio(audioUrl);
+  audio.play();
+}
 
 // Función para vibrar el dispositivo
 function vibrateDevice() {
@@ -405,3 +407,7 @@ function vibrateDevice() {
     navigator.vibrate([200]); // Vibra durante 200 milisegundos
   }
 }
+
+document.querySelector('.menu-icon').addEventListener('click', function() {
+  document.querySelector('.nav-links').classList.toggle('show');
+});
