@@ -452,7 +452,7 @@ var lastScrollTop = 0;
     lastScrollTopHeader = stHeader;
   });
 
- // Función para compartir la pregunta con el enlace
+ // Función para compartir la pregunta y el enlace
 function compartirPregunta() {
   // Obtener la URL actual
   var urlActual = window.location.href;
@@ -463,23 +463,17 @@ function compartirPregunta() {
   // Crear el mensaje para compartir
   var mensaje = "¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + "Enlace: " + urlActual;
 
-  // Crear un elemento temporal de textarea para copiar el mensaje
-  var textarea = document.createElement("textarea");
-  textarea.value = mensaje;
-
-  // Añadir el área de texto al DOM
-  document.body.appendChild(textarea);
-
-  // Seleccionar el contenido del área de texto
-  textarea.select();
-  textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-  // Copiar al portapapeles
-  document.execCommand("copy");
-
-  // Eliminar el área de texto temporal
-  document.body.removeChild(textarea);
-
-  // Alerta o mensaje indicando que se copió el enlace y la pregunta
-  alert("La pregunta y el enlace han sido copiados al portapapeles");
+  // Verificar si el navegador admite la API de compartir
+  if (navigator.share) {
+    navigator.share({
+      title: 'Pregunta en Preguntor',
+      text: mensaje,
+      url: urlActual
+    })
+      .then(() => console.log('Contenido compartido con éxito'))
+      .catch((error) => console.error('Error al compartir:', error));
+  } else {
+    // Si el navegador no admite la API de compartir, mostrar un mensaje de alerta con el contenido a copiar
+    alert("Tu navegador no admite la función de compartir. Puedes copiar la siguiente información:\n\n" + mensaje);
+  }
 }
