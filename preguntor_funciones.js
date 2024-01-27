@@ -451,3 +451,25 @@ var lastScrollTop = 0;
 
     lastScrollTopHeader = stHeader;
   });
+
+  function copyQuestion() {
+    // Seleccionar el elemento de la pregunta
+    var questionElement = document.getElementById('question');
+    
+    // Crear un elemento de texto temporal
+    var tempElement = document.createElement('textarea');
+    tempElement.value = questionElement.innerText;
+  
+    // Agregar el elemento temporal al DOM
+    document.body.appendChild(tempElement);
+  
+    // Seleccionar y copiar el contenido del elemento temporal
+    tempElement.select();
+    document.execCommand('copy');
+  
+    // Eliminar el elemento temporal del DOM
+    document.body.removeChild(tempElement);
+  
+    // Mostrar una alerta o realizar otras acciones si lo deseas
+    alert('Pregunta copiada al portapapeles: ' + tempElement.value);
+  }
