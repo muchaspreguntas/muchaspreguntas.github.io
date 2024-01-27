@@ -452,14 +452,20 @@ var lastScrollTop = 0;
     lastScrollTopHeader = stHeader;
   });
 
- // Función para copiar la pregunta al portapapeles
+ // Función para compartir la pregunta con el enlace
 function compartirPregunta() {
-  // Seleccionar el elemento que contiene la pregunta
-  var preguntaElement = document.getElementById("question");
+  // Obtener la URL actual
+  var urlActual = window.location.href;
 
-  // Crear un área de texto temporal
+  // Obtener el contenido de la pregunta
+  var pregunta = document.getElementById("question").innerText;
+
+  // Crear el mensaje para compartir
+  var mensaje = "¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + "Enlace: " + urlActual;
+
+  // Crear un elemento temporal de textarea para copiar el mensaje
   var textarea = document.createElement("textarea");
-  textarea.value = preguntaElement.innerText;
+  textarea.value = mensaje;
 
   // Añadir el área de texto al DOM
   document.body.appendChild(textarea);
@@ -474,6 +480,6 @@ function compartirPregunta() {
   // Eliminar el área de texto temporal
   document.body.removeChild(textarea);
 
-  // Alerta o mensaje indicando que se copió la pregunta
-  alert("La pregunta ha sido copiada al portapapeles");
+  // Alerta o mensaje indicando que se copió el enlace y la pregunta
+  alert("La pregunta y el enlace han sido copiados al portapapeles");
 }
