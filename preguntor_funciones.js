@@ -452,24 +452,28 @@ var lastScrollTop = 0;
     lastScrollTopHeader = stHeader;
   });
 
-  function copyQuestion() {
-    // Seleccionar el elemento de la pregunta
-    var questionElement = document.getElementById('question');
-    
-    // Crear un elemento de texto temporal
-    var tempElement = document.createElement('textarea');
-    tempElement.value = questionElement.innerText;
-  
-    // Agregar el elemento temporal al DOM
-    document.body.appendChild(tempElement);
-  
-    // Seleccionar y copiar el contenido del elemento temporal
-    tempElement.select();
-    document.execCommand('copy');
-  
-    // Eliminar el elemento temporal del DOM
-    document.body.removeChild(tempElement);
-  
-    // Mostrar una alerta o realizar otras acciones si lo deseas
-    alert('Pregunta copiada al portapapeles: ' + tempElement.value);
-  }
+ // Función para copiar la pregunta al portapapeles
+function compartirPregunta() {
+  // Seleccionar el elemento que contiene la pregunta
+  var preguntaElement = document.getElementById("question");
+
+  // Crear un área de texto temporal
+  var textarea = document.createElement("textarea");
+  textarea.value = preguntaElement.innerText;
+
+  // Añadir el área de texto al DOM
+  document.body.appendChild(textarea);
+
+  // Seleccionar el contenido del área de texto
+  textarea.select();
+  textarea.setSelectionRange(0, 99999); // Para dispositivos móviles
+
+  // Copiar al portapapeles
+  document.execCommand("copy");
+
+  // Eliminar el área de texto temporal
+  document.body.removeChild(textarea);
+
+  // Alerta o mensaje indicando que se copió la pregunta
+  alert("La pregunta ha sido copiada al portapapeles");
+}
