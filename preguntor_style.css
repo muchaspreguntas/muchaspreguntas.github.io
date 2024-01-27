@@ -104,6 +104,8 @@ button:hover {
   color: #000000;
 }
 
+
+
 /* Estilo para el contenedor del botón de selección de tema y menú desplegable */
 .theme-selector-container {
   display: flex;
@@ -111,6 +113,32 @@ button:hover {
   align-items: center;
   text-align: center;
 }
+
+/* Estilos para el botón de compartir pregunta y enlace */
+#shareSelectButton {
+  background-color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Estilo para el botón al pasar el ratón */
+#shareSelectButton:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #00ff00;
+}
+
+
 
 /* Estilo para el botón de selección de tema y para el menú desplegable */
 #themeSelectButton, #themeSelect {

@@ -477,3 +477,4 @@ function compartirPregunta() {
     alert("Tu navegador no admite la función de compartir. Puedes copiar la siguiente información:\n\n" + mensaje);
   }
 }
+a
