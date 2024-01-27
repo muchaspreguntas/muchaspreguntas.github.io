@@ -461,7 +461,7 @@ function compartirPregunta() {
   var pregunta = document.getElementById("question").innerText;
 
   // Crear el mensaje para compartir
-  var mensaje = "¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + "Enlace: " + urlActual;
+  var mensaje = "¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + "Enlace: ";
 
   // Verificar si el navegador admite la API de compartir
   if (navigator.share) {
