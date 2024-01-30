@@ -478,3 +478,18 @@ function compartirPregunta() {
   }
 }
 
+// Función para cargar el contenido del header y footer
+async function cargarHeaderYFooter() {
+  // Cargar el header
+  const headerResponse = await fetch('header.html');
+  const headerHtml = await headerResponse.text();
+  document.querySelector('body').insertAdjacentHTML('afterbegin', headerHtml);
+
+  // Cargar el footer
+  const footerResponse = await fetch('footer.html');
+  const footerHtml = await footerResponse.text();
+  document.querySelector('body').insertAdjacentHTML('beforeend', footerHtml);
+}
+
+// Llamar a la función al cargar la página
+window.onload = cargarHeaderYFooter;
