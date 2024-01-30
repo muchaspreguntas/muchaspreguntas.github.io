@@ -477,15 +477,3 @@ function compartirPregunta() {
     alert("Tu navegador no admite la función de compartir. Puedes copiar la siguiente información:\n\n" + mensaje);
   }
 }
-
-// Modificado el código en scripts.js
-
-// Obtén la referencia al menú y al icono del menú
-const menuToggle = document.getElementById('menuToggle');
-const menuIcon = document.querySelector('.menu-icon');
-
-// Agrega un evento de clic al icono del menú
-menuIcon.addEventListener('click', () => {
-    // Alternar la clase 'show' en el menú para cambiar la visibilidad
-    menuToggle.classList.toggle('show');
-});

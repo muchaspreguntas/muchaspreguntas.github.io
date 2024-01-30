@@ -257,7 +257,7 @@ hr {
 
 header {
   background-color: #ffffff;
-  padding: 10px;
+  padding: 5px;
   color: #000000;
   display: flex;
   justify-content: center;
@@ -318,3 +318,13 @@ header {
   }
 }
 
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* Ajusta el fondo del menú desplegable según tu diseño */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
