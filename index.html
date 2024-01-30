@@ -21,26 +21,18 @@
 </head>
 
 <body>
-  <div id="header-container"></div>
+   <!-- Incluir el header -->
+   <object type="text/html" data="header.html" width="100%" height="50px"></object>
 
-  <!-- Contenido específico de la página -->
-  
-  <div id="footer-container"></div>
-  
-  <script>
-      // Cargar el contenido del header
-      document.getElementById('header-container').innerHTML = `
-          <object type="text/html" data="header.html" width="100%"></object>
-      `;
-  
-      // Cargar el contenido del footer
-      document.getElementById('footer-container').innerHTML = `
-          <object type="text/html" data="footer.html" width="100%"></object>
-      `;
-  </script>
+   <!-- Contenido de la primera página -->
+   <h1>Contenido de la Página 1</h1>
+   <!-- ... -->
+
+   <!-- Incluir el footer -->
+   <object type="text/html" data="footer.html" width="100%" height="50px"></object>
 
   <!-- Encabezado del cuerpo de la página -->
-  <h1>Preguntor9</h1>
+  <h1>Preguntor1</h1>
   <h4>Juego de Preguntas Para Charlas Interesantes</h4>
   <!-- Elemento de audio para el sonido del botón -->
   <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
