@@ -477,4 +477,16 @@ function compartirPregunta() {
     alert("Tu navegador no admite la función de compartir. Puedes copiar la siguiente información:\n\n" + mensaje);
   }
 }
-a
+
+ // Función para cargar el contenido de un archivo
+ function includeHTML(file, containerId) {
+  fetch(file)
+      .then(response => response.text())
+      .then(html => {
+          document.getElementById(containerId).innerHTML = html;
+      });
+}
+
+// Cargar el header y el footer
+includeHTML("header.html", "header-container");
+includeHTML("footer.html", "footer-container");
