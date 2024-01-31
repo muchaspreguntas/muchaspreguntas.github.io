@@ -138,6 +138,15 @@ button:hover {
   border-color: #00ff00;
 }
 
+a {
+  background-color: #0de914;  /* Color de fondo */
+  transition: background-color 0.3s;  /* Transición suave del color de fondo */
+}
+
+/* Cambio de color de fondo al pasar el mouse */
+a:hover {
+  background-color: #000000;
+}
 
 
 /* Estilo para el botón de selección de tema y para el menú desplegable */
