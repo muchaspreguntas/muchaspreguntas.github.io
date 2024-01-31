@@ -312,7 +312,8 @@ const questions = {
       "18. Desde tu punto de vista, ¿cómo se puede fomentar la creatividad y la innovación en equipos?",
       "19. ¿Cómo abordas la toma de riesgos en la toma de decisiones empresariales?",
       "20. ¿Cuál es tu estrategia para atraer y retener talento en tu empresa?",
-      "21. ¿De qué manera Preguntor podría revolucionar la publicidad, permitiendo a las empresas conectar de forma innovadora y emocional con su audiencia? Más información: [Preguntor - Generando Publicidad Humana](https://preguntor.github.io/)"
+      '21. ¿De qué manera Preguntor podría revolucionar la publicidad, permitiendo a las empresas conectar de forma innovadora y emocional con su audiencia? Más información: <a href="https://preguntor.github.io/" target="_blank">Preguntor - Generando Publicidad Humana</a>',
+
     ],
     educacion: [
       "1. ¿Cómo defines la calidad educativa y qué medidas tomas para mejorarla?",
