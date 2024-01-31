@@ -24,7 +24,6 @@ const questions = {
       "18. ¿Cómo pueden las pequeñas empresas contribuir al desarrollo económico local?",
       "19. ¿Crees que la globalización económica ha beneficiado a todas las naciones por igual?",
       "20. ¿Cuál es tu perspectiva sobre la relación entre la salud económica y el bienestar social?",
-      "21. Analiza las distintas perspectivas sobre las razones económicas detrás del declive del socialismo en Venezuela. ¿Cómo la gestión económica, políticas fiscales y decisiones gubernamentales impactaron en el resultado final? - Hecha Por Kristian Martinez Colina",
     ],
     pareja: [
       "1. Más allá de las cualidades superficiales, ¿cuáles son los valores fundamentales que buscas en una pareja?",
@@ -313,6 +312,7 @@ const questions = {
       "18. Desde tu punto de vista, ¿cómo se puede fomentar la creatividad y la innovación en equipos?",
       "19. ¿Cómo abordas la toma de riesgos en la toma de decisiones empresariales?",
       "20. ¿Cuál es tu estrategia para atraer y retener talento en tu empresa?",
+      "21. ¿De qué manera Preguntor podría revolucionar la publicidad, permitiendo a las empresas conectar de forma innovadora y emocional con su audiencia? Más información: [Preguntor - Generando Publicidad Humana](https://preguntor.github.io/)"
     ],
     educacion: [
       "1. ¿Cómo defines la calidad educativa y qué medidas tomas para mejorarla?",
