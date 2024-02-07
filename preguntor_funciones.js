@@ -380,7 +380,7 @@ const questions = {
       "17. ¿Cuál es la experiencia más vergonzosa que has tenido durante el sexo?",
       "18. ¿Has tenido alguna experiencia con el sexo telefónico o virtual?",
       "19. ¿Qué te gustaría explorar más en tu vida sexual?",
-      "20. ¿Cómo crees que el sexo puede ser una forma de expresión de amor y conexión entre personas?"
+      "20. ¿Cómo crees que el sexo puede ser una forma de expresión de amor y conexión entre personas?",
     ],
     
   
