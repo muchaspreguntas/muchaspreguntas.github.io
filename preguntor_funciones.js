@@ -1,5 +1,5 @@
 // Definición de temas disponibles
-const themes = ["economia", "pareja", "ciencia", "psicologia", "religion", "politica", "desarrollo", "filosofia", "tecnologia", "historia", "vivencias", "miedos", "amor", "educacion", "negocios", "etica"];
+const themes = ["economia", "pareja", "ciencia", "psicologia", "religion", "politica", "desarrollo", "filosofia", "tecnologia", "historia", "vivencias", "miedos", "amor", "educacion", "negocios", "etica", "sexo"];
 
 // Definición de preguntas por tema
 const questions = {
@@ -358,7 +358,32 @@ const questions = {
       "18. ¿Es moralmente aceptable utilizar la información genética con fines de selección de parejas?",
       "19. ¿La mente humana tiene o debe tener límites éticos en la búsqueda del conocimiento?",
       "20. ¿Es ético el uso de la biotecnología para mejorar las capacidades cognitivas humanas?",
-    ],    
+    ],   
+    
+    sexo: [
+      "1. ¿Qué fantasías sexuales te gustaría explorar juntos?",
+      "2. ¿Cuál es tu opinión sobre experimentar con nuevas posiciones sexuales?",
+      "3. ¿Cómo podemos mejorar la comunicación sobre nuestras preferencias sexuales?",
+      "4. ¿Qué tipo de caricias o besos te resultan más placenteros?",
+      "5. ¿Qué tan importante es para ti la frecuencia sexual en nuestra relación?",
+      "6. ¿Cómo podemos mantener viva la chispa sexual a lo largo del tiempo?",
+      "7. ¿Te gustaría probar nuevas técnicas de masaje sensual o erótico?",
+      "8. ¿Qué rol desempeña la confianza en nuestra vida sexual?",
+      "9. ¿Qué importancia le das a la intimidad emocional en nuestra vida sexual?",
+      "10. ¿Cuál es tu opinión sobre la idea de incorporar juguetes sexuales en nuestra intimidad?",
+      "11. ¿Cuál es la experiencia sexual más memorable que has tenido?",
+      "12. ¿Qué opinas sobre la idea de tener sexo en un lugar público?",
+      "13. ¿Cuál es tu opinión sobre la pornografía y su impacto en la sexualidad?",
+      "14. ¿Has probado alguna vez el sexo tántrico o alguna técnica de control de orgasmos?",
+      "15. ¿Qué consejo te gustaría haber recibido antes de tener tu primera experiencia sexual?",
+      "16. ¿Qué opinas sobre la idea de tener sexo casual?",
+      "17. ¿Cuál es la experiencia más vergonzosa que has tenido durante el sexo?",
+      "18. ¿Has tenido alguna experiencia con el sexo telefónico o virtual?",
+      "19. ¿Qué te gustaría explorar más en tu vida sexual?",
+      "20. ¿Cómo crees que el sexo puede ser una forma de expresión de amor y conexión entre personas?"
+    ],
+    
+  
     
 };
 
