@@ -375,13 +375,12 @@ header {
 
 #answerBox {
   background-color: #eeeded;
-  width: calc(100% - 20px); /* El ancho es igual al 100% del contenedor menos el padding */
+  width: 30%;
   padding: 10px;
   border: 2px solid #000000;
   border-radius: 5px;
   font-family: 'Playfair Display', serif;
   font-size: 16px;
   line-height: 1.5;
-  margin-top: 10px; /* Espacio entre la pregunta y la caja de respuesta */
 }
 
