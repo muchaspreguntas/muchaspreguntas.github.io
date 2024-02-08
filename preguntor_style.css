@@ -343,11 +343,19 @@ header {
 
 /* Estilos para el botón de respuesta */
 #showAnswerBoxButton {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #000000;
   padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
+  border: 2px solid #000000; /* Cambiado para especificar el tipo de borde */
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px; /* Espacio en la parte superior */
+  margin-bottom: 10px; /* Espacio en la parte inferior */
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
