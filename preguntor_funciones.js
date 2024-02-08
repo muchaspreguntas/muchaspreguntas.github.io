@@ -511,15 +511,3 @@ function toggleAnswerBox() {
 }
 
 
-//Inrriqueser texto 
-function setBold() {
-  document.execCommand('bold');
-}
-
-function setItalic() {
-  document.execCommand('italic');
-}
-
-function setUnderline() {
-  document.execCommand('underline');
-}
