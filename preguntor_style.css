@@ -371,17 +371,28 @@ header {
 #showAnswerBoxButton:active {
   border-color: #00ff00; /* Color verde para los bordes */
 }
-
 /* Estilos para la caja de texto de respuesta */
-#answerBoxContainer {
-  margin-top: 5px;
-  display: flex;
-  justify-content: center; /* Centra horizontalmente */
-}
-
 #answerBoxContainer {
   margin-top: 5px;
   width: auto; /* Ancho al 100% */
   margin-left: auto; /* Alinea a la derecha */
   margin-right: auto; /* Alinea a la izquierda */
+}
+
+/* Estilos para la caja de texto de respuesta */
+#answerBox {
+  background-color: #eeeded;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: auto; /* Ancho al 100% */
+  transition: border-color 0.3s; /* Transición del color del borde */
+}
+
+/* Estilos para cambiar el color del borde cuando se escribe algo */
+#answerBox:focus {
+  border-color: #00ff00; /* Cambia el color del borde al verde cuando la caja está enfocada */
 }
