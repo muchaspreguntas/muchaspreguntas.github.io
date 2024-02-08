@@ -509,3 +509,17 @@ function toggleAnswerBox() {
   var answerBoxContainer = document.getElementById("answerBoxContainer");
   answerBoxContainer.style.display = (answerBoxContainer.style.display === "none") ? "block" : "none";
 }
+
+
+//Inrriqueser texto 
+function setBold() {
+  document.execCommand('bold');
+}
+
+function setItalic() {
+  document.execCommand('italic');
+}
+
+function setUnderline() {
+  document.execCommand('underline');
+}
