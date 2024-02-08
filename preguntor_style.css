@@ -373,14 +373,9 @@ header {
   margin-top: 5px;
 }
 
-#answerBox {
-  background-color: #ffffff;
-  width: 30%;
-  padding: 10px;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  line-height: 1.5;
+#answerBoxContainer {
+  margin-top: 5px;
+  width: 100%; /* Ancho al 100% */
+  margin-left: auto; /* Alinea a la derecha */
+  margin-right: auto; /* Alinea a la izquierda */
 }
-
