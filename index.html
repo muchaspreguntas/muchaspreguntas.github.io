@@ -43,7 +43,7 @@
 
 
   <!-- Encabezado del cuerpo de la página -->
-  <h1>Preguntor10</h1>
+  <h1>Preguntor11</h1>
   <h4>Juego de Preguntas Para Charlas Interesantes</h4>
   <!-- Elemento de audio para el sonido del botón -->
   <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
@@ -87,7 +87,7 @@
     <!-- ... (contenido existente) ... -->
   </div>
   
-  <!-- Botón para mostrar u ocultar la caja de texto -->
+ <!-- Botón para mostrar u ocultar la caja de texto -->
 <button id="showAnswerBoxButton" onclick="toggleAnswerBox()">
   <span>&#x25BC;</span> Respuesta
 </button>
@@ -95,7 +95,7 @@
 <!-- Contenedor de la caja de texto (inicialmente oculto) -->
 <div id="answerBoxContainer" style="display: none;">
   <!-- Caja de texto para escribir la respuesta -->
-  <textarea id="answerBox" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+  <div id="answerBox" contenteditable="true" placeholder="Escribe tu respuesta aquí..."></div>
 </div>
 
 
