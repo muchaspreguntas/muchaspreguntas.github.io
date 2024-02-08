@@ -79,6 +79,27 @@
       <h2 id="question">¿Cuál es tu perspectiva sobre la desigualdad económica?</h2>
     </div>
 
+    <!-- Contenedor para la pregunta y la caja de texto -->
+<div class="question-container">
+  <!-- Contenido de la pregunta -->
+  <div id="questionContainer">
+    <!-- Categoría, título y texto de la pregunta -->
+    <!-- ... (contenido existente) ... -->
+  </div>
+  
+  <!-- Botón para mostrar u ocultar la caja de texto -->
+  <button id="showAnswerBoxButton" onclick="toggleAnswerBox()">Escribe tu respuesta</button>
+  
+  <!-- Contenedor de la caja de texto (inicialmente oculto) -->
+  <div id="answerBoxContainer" style="display: none;">
+    <!-- Caja de texto para escribir la respuesta -->
+    <textarea id="answerBox" rows="4" placeholder="Escribe tu respuesta aquí..."></textarea>
+    <!-- Botón para enviar la respuesta -->
+    <button onclick="sendAnswer()">Enviar</button>
+  </div>
+</div>
+
+
     <!-- Botón para la siguiente pregunta (con llamada a función JavaScript) -->
     <button onclick="nextQuestion()">Siguiente Pregunta</button>
     <button id="shareSelectButton" onclick="compartirPregunta()">Compartir</button>

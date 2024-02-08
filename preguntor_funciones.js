@@ -503,3 +503,16 @@ function compartirPregunta() {
     alert("Tu navegador no admite la función de compartir. Puedes copiar la siguiente información:\n\n" + mensaje);
   }
 }
+
+// Función para mostrar u ocultar la caja de texto
+function toggleAnswerBox() {
+  var answerBoxContainer = document.getElementById('answerBoxContainer');
+  answerBoxContainer.style.display = (answerBoxContainer.style.display === 'none') ? 'block' : 'none';
+}
+
+// Función para enviar la respuesta (puedes implementarla según tus necesidades)
+function sendAnswer() {
+  var answer = document.getElementById('answerBox').value;
+  // Aquí puedes realizar alguna acción con la respuesta, como enviarla a través de una solicitud AJAX, etc.
+  console.log('Respuesta:', answer);
+}
