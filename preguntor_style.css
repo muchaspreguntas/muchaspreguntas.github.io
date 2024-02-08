@@ -338,3 +338,34 @@ header {
   width: 100%;
   z-index: 1;
 }
+
+/* Estilos para el botón de respuesta */
+#showAnswerBoxButton {
+  background-color: transparent;
+  border: 2px solid #000000;
+  color: #000000;
+  padding: 5px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* Estilos para el icono de flecha */
+#showAnswerBoxButton span {
+  margin-right: 5px;
+}
+
+/* Estilos para la caja de texto de respuesta */
+#answerBox {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+}
+
+/* Estilos para animar la aparición de la caja de texto */
+#answerBoxContainer {
+  transition: max-height 0.5s ease-out;
+  overflow: hidden;
+}
