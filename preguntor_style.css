@@ -348,17 +348,19 @@ header {
   font-weight: bold;
   color: #000000;
   padding: 10px 20px;
-  border: 2px solid #000000; /* Cambiado para especificar el tipo de borde */
+  border: 2px solid #000000;
   border-radius: 4px;
   cursor: pointer;
   font-size: 12px;
-  margin-top: 10px; /* Espacio en la parte superior */
-  margin-bottom: 10px; /* Espacio en la parte inferior */
+  margin-top: 10px;
+  margin-bottom: 10px;
   text-align: center;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
   cursor: pointer;
   display: flex;
   align-items: center;
+  margin-left: auto; /* Alinea a la derecha */
+  margin-right: auto; /* Alinea a la izquierda */
 }
 
 /* Estilos para el icono de flecha */
@@ -368,10 +370,11 @@ header {
 
 /* Estilos para la caja de texto de respuesta */
 #answerBoxContainer {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #answerBox {
+  background-color: #eeeded;
   width: 100%;
   padding: 10px;
   border: 2px solid #000000;
@@ -380,3 +383,4 @@ header {
   font-size: 16px;
   line-height: 1.5;
 }
+
