@@ -368,14 +368,20 @@ header {
   margin-right: 5px;
 }
 
+#showAnswerBoxButton:active {
+  border-color: #00ff00; /* Color verde para los bordes */
+}
+
 /* Estilos para la caja de texto de respuesta */
 #answerBoxContainer {
   margin-top: 5px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
 }
 
 #answerBoxContainer {
   margin-top: 5px;
-  width: 100%; /* Ancho al 100% */
+  width: auto; /* Ancho al 100% */
   margin-left: auto; /* Alinea a la derecha */
   margin-right: auto; /* Alinea a la izquierda */
 }
