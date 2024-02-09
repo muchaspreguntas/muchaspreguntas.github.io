@@ -1,120 +1,257 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <!-- Configuración básica del documento -->
-  <link rel="icon" type="image/png" href="logotipo.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>preguntor</title>
-
-  <!-- Enlace a la hoja de estilos externa -->
-  <link rel="stylesheet" type="text/css" href="preguntor_style.css">
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-ML5NSC6C');</script>
-    <!-- End Google Tag Manager -->
-
-
+    <link rel="icon" type="image/png" href="logotipo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="plan.css">
+    <title>Planes</title>
 </head>
-
 <body>
-  <header>
-    <div class="logo-container">
-      <img src="logo.png" alt="Logo de tu sitio">
+    <header>
+        <nav>
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo de tu sitio">
+            </div>
+            <ul class="nav-links">
+                <li><a href="https://wa.link/wydxta" class="button">Habla con un Asesor</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+    
+    <h1>¡Destaca con Preguntas que Inspiren Conversaciones Únicas en Preguntor!</h1>
+    
+    <div class="plans-container">
+        <div id="planes" class="plans-slider">
+          <div class="plan" onclick="togglePlan(this)">
+            <img src="iconos/exploracion.png" alt="icono Viaje" class="icono">
+            <h5>Exploración</h5>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 3.500 COP</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 7 Dias</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Una (1) Pregunta</p>
+            <a href="https://preguntor.github.io/">
+              <button id="button_plan" onclick="pay()">¡Comprar ahora!</button>
+            </a>
+          </div>
+    
+          <div class="plan" onclick="togglePlan(this)">
+            <img src="iconos/conocimiento.png" alt="icono Viaje" class="icono">
+            <h5>Conocimientos</h5>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 4.500 COP</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 10 Dias</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Una (1) Pregunta</p>
+            <a href="https://preguntor.github.io/">
+              <button id="button_plan" onclick="pay()">¡Comprar ahora!</button>
+            </a>
+          </div>
+    
+          <div class="plan" onclick="togglePlan(this)">
+            <img src="iconos/cohete.png" alt="icono Viaje" class="icono">
+            <h5>Empresarial</h5>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 25.900 COP</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 25 Dias</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Cinco (5) Preguntas</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Gratis:</strong> Una (1) Categoria personalizada</p>
+            <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Gratis:</strong> Asesoramiento y Seguimiento</p>
+            <a href="https://wa.link/wydxta">
+                <button id="button_plan" onclick="pay()">Contactar</button>
+              </a>
+          </div>
+
+
+        </div>
+    
+    
+        <button class="prev-button" onclick="changePlan(-1)">&#10094;</button>
+        <button class="next-button" onclick="changePlan(1)">&#10095;</button>
+      </div>
+
+      <h4>Metodos de Pago</h4>
+      <div class="payment-container">
+          <div class="payment-slider">
+              <img src="medios_pago/visa.png" alt="Logo 1" class="payment-image">
+              <img src="medios_pago/mastercard.png" alt="Logo 2" class="payment-image">
+              <img src="medios_pago/pse.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/bbva.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/codensa.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/efecty.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/bancoavvillas.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/bancolombia.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/bancospopular.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/dinersclub.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/davivienda.png" alt="Logo 3" class="payment-image">
+              <img src="medios_pago/colpatria.png" alt="Logo 3" class="payment-image">
+              <!-- Agrega más imágenes según sea necesario -->
+          </div>
+      </div>
+
+      <div class="highlighted-question">
+        <h5>¿Qué es una pregunta destacada?</h5>
+        <p class="highlighted-question-description">
+            Una "pregunta destacada" en Preguntor te permite compartir tus propias preguntas y participar en conversaciones fascinantes con amigos y amigas. Con esta función, puedes crear situaciones interactivas y disfrutar de charlas emocionantes en la plataforma.
+        </p>
     </div>
-    <nav>
-      <ul class="nav-links">
-        <li><a href="https://zinc-climb-c0a.notion.site/Deja-Tu-Huella-b31c004a588f4358852f2dbacbb77308?pvs=4">¡Deja Tu pregunta!</a></li>
-        <li><a href="https://zinc-climb-c0a.notion.site/Historia-de-Pregunton-ee4348144752467681523696789fa17b?pvs=4">Historia</a></li>
-        <li><a href="https://forms.gle/gZsbmRtreD2pjVDo6">Mejora El Juego</a></li>
-        <li><a href="https://github.com/preguntor/preguntor.github.io">Un Juego de Codigo Abierto</a></li>
-        <li><a href="https://www.linkedin.com/in/kristianmartinezcolina/">Linkedin De Founder </a></li>
-      </ul>
-      <div class="menu-icon">&#9776;</div>
-    </nav>
-  </header>
-  <!-- Modificado el código del menú en el header -->
-
-      <!-- ... (tus elementos de la lista) ... -->
-  
-
-
-  <!-- Encabezado del cuerpo de la página -->
-  <h1>Preguntor</h1>
-  <h4>Juego de Preguntas Para Charlas Interesantes</h4>
-  <!-- Elemento de audio para el sonido del botón -->
-  <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
-
-  <!-- Contenedor principal de la página -->
-  <div class="container">
-    <!-- Contenedor de la pregunta -->
-    <div id="questionContainer">
-      <!-- Categoría de la pregunta (con clase CSS dinámica) -->
-      <select id="themeSelect" title="Selecciona un tema">
-        <option value="amor">Amor</option>
-        <option value="ciencia">Ciencia</option>
-        <option value="desarrollo">Desarrollo</option>
-        <option value="economia">Economía</option>
-        <option value="educacion">Educación</option>
-        <option value="etica">Ética</option>
-        <option value="filosofia">Filosofía</option>
-        <option value="historia">Historia</option>
-        <option value="vivencias">Vivencias</option>
-        <option value="miedos">Miedos</option>
-        <option value="negocios">Negocios</option>
-        <option value="pareja">Pareja</option>
-        <option value="politica">Política</option>
-        <option value="psicologia">Psicología</option>
-        <option value="religion">Religión</option>
-        <option value="tecnologia">Tecnología</option>
-        <option value="sexo">Sexo</option>
-        <option value="todos">Todos los temas</option>
-      </select>
-      <!-- Título de la pregunta -->
-      <h3>Pregunta:</h3>
-        <h4 id="category" class="category economia"> Economía</h4>
-      <h2 id="question">¿Cuál es tu perspectiva sobre la desigualdad económica?</h2>
+    
+      <h4>Beneficios</h4>
+    <div class="reasons-container">
+        <div class="reason">
+            <img src="iconos/estrela.png" alt="Icono 1" class="icon-img">
+            <h5>Generar Conversaciones Impactantes</h5>
+            <p>¿Quieres diálogos profundos y memorables? Con una pregunta destacada, inspirarás charlas interesantes y contribuirás a la creación de conversaciones que resuenen en la mente de todos.</p>
+        </div>
+        <div class="reason">
+            <img src="iconos/verificacion-de-escudo.png" alt="Icono 2" class="icon-img">
+            <h5>Garantía de Diversión y Participación</h5>
+            <p>¡Haz que la experiencia sea emocionante! Destacar tu pregunta garantiza que participar en Preguntor sea aún más emocionante y divertido.</p>
+        </div>
+        <div class="reason">
+            <img src="iconos/megafono.png" alt="Icono 3" class="icon-img">
+            <h5>Estrategia de Marca Efectiva</h5>
+            <p>Si tienes algún negocio o emprendimiento esto es para ti; ¡Impulsa tu marca! Pagar por una pregunta destacada relacionada con tu emprendimiento es una estrategia efectiva para elevar la visibilidad de tu marca.</p>
+        </div>
     </div>
 
-    <!--0000000-->
-<!-- Botón para mostrar u ocultar la caja de texto -->
-<button id="showAnswerBoxButton" onclick="toggleAnswerBox()">
-  <span>&#x25BC;</span> Escribir Respuesta
-</button>
+    <h4>Usuarios</h4>
+    <div class="image-container_ejemplo_2">
+        <img src="unic_app.png" alt="Ejemplo Imagen" class="responsive-image">
+    </div>
 
-<!-- Contenedor de la caja de texto (inicialmente oculto) -->
-<div id="answerBoxContainer" style="display: none;">
-  <!-- Caja de texto para escribir la respuesta -->
-  <div id="answerBox" contenteditable="true" placeholder="Escribe tu respuesta aquí..." style="background-color:#fff; padding: 10px; border: 2px solid #000000; border-radius: 5px; font-family: 'Playfair Display', serif; font-size: 16px; line-height: 1.5; width: auto;"></div>
-</div>
-<!--0000000-->
+    <h4>Garantia</h4>
+    <div class="highlighted-question">
+        <h5>Garantia</h5>
+        <p class="highlighted-question-description">
+            Si tu compra no cumple con tus expectativas por cualquier razón y han transcurrido menos de 48 horas, solo avísanos y te reembolsaremos el 50% del pago en el mismo día, sin necesidad de cumplir con requisitos adicionales. Tu satisfacción es nuestra prioridad.
+        </p>
+    </div>
 
-    <!-- Botón para la siguiente pregunta (con llamada a función JavaScript) -->
-    <button onclick="nextQuestion()">Siguiente Pregunta</button>
-    <button id="shareSelectButton" onclick="compartirPregunta()">Compartir</button>
+    <h4>Ejemplo Para Empresarios</h4>
+    <div class="gallery">
+        <div class="image-container">
+            <img src="explicacion/categoria.png" alt="Imagen 1">
+            <div class="description"> <strong>Categoría:</strong>Tema de interés con el que el usuario quería jugar. Aquí se coloca la categoría de la empresa que invierta por la publicidad. </div>
+        </div>
+        <div class="image-container">
+            <img src="explicacion/pregunta.png" alt="Imagen 2">
+            <div class="description"><strong>Pregunta:</strong> Crea una pregunta en la cual se inserta la publicidad de forma natural y no invasiva.</div>
+        </div>
+        <div class="image-container">
+            <img src="explicacion/enlace.png" alt="Imagen 3">
+            <div class="description"><strong>Enlace:</strong> Este lleva al usuario a una página específica de tu empresa en el cual podrás vender tu producto o servicio. </div>
+        </div>
+    </div>
+    
+
+      <h4>Compara Los Planes</h4>
+      <table>
+        <thead>
+            <tr>
+                <th>Planes</th>
+                <th>Tiempo</th>
+                <th>Preguntas</th>
+                <th>Precio</th>
+                <th>Gratis</th>
+                <th>¡Aprovecha!</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="iconos/exploracion.png" alt="Icono Viaje" class="plan-icon">
+                    Exploración
+                </td>
+                <td>7 Dias</td>
+                <td>1</td>
+                <td>3.500 COP</td>
+                <td>---</td>
+                <td><a href="#planes" class="button_plan">Comprar</a></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <img src="iconos/conocimiento.png" alt="Icono Conocimiento" class="plan-icon">
+                    Conocimientos
+                </td>
+                <td>10 Dias</td>
+                <td>1</td>
+                <td>4.500 COP</td>
+                <td>---</td>
+                <td><a href="#planes" class="button_plan">Comprar</a></td>
+
+            </tr>
+            <tr>
+                <td>
+                    <img src="iconos/cohete.png" alt="Icono Empresarial" class="plan-icon">
+                    Empresarial
+                </td>
+                <td>25 Dias</td>
+                <td>5</td>
+                <td>25.900 COP</td>
+                <td>Una (1) Categotia + Asesoramiento + Seguimiento</td>
+                <td><a href="https://wa.link/wydxta" class="button_plan">Contactar</a></td>
+            </tr>
+        </tbody>
+    </table>
+    
+     <h4>Preguntas Frecuentes</h4>
+     <details class="custom-details">
+        <summary class="question-heading">
+            <img src="iconos/angulo-derecho.png" alt="Icono Precio" class="icon-small">
+            <h2>¿Cómo se hace el pago?</h2>
+        </summary>
+        <div class="highlighted-question">
+            <h4>Destacar tu pregunta en Preguntor es una estrategia eficaz para aumentar la visibilidad de tu negocio.</h4>
+            <p class="highlighted-question-description">
+                <strong>1. Selecciona tu plan y procede a pagar:</strong> Elige el plan que mejor se adapte a tus necesidades y haz clic en el botón "Comprar".
+                <br>
+                <strong>2. Pago seguro a través de Mercado Pago:</strong> Serás redirigido a la plataforma de pago segura de Mercado Pago, donde podrás ingresar los datos de tu banco o seleccionar tu medio de pago preferido.
+                <br>
+                <strong>3. Sigue las instrucciones posteriores al pago:</strong> Después de completar el proceso de pago, sigue las indicaciones proporcionadas por la plataforma. Si tienes alguna pregunta o necesitas asistencia adicional, consulta la sección "¿Qué hago ahora?" para obtener orientación detallada sobre los siguientes pasos.
+            </p>
+            <a href="#planes" class="button_plan">Destacar Pregunta</a>
+        </div>
+    </details>
+    <details class="custom-details">
+        <summary class="question-heading">
+            <img src="iconos/angulo-derecho.png" alt="Icono Precio" class="icon-small">
+            <h2>¿Qué hago ahora luego de hacer el pago?</h2>
+        </summary>
+        <div class="highlighted-question">
+            <h4>Destacar tu pregunta en Preguntor es una estrategia eficaz para aumentar la visibilidad de tu negocio.</h4>
+            <p class="highlighted-question-description">
+                <strong>1. Escribirle a tu asesor:</strong> Envía un mensaje a tu asesor en el <a href="https://wa.link/wydxta">WhatsApp 3104587612</a> y envíale el comprobante de pago.
+                <br>
+                <strong>2. Envía tu pregunta:</strong> Una vez que hayas contactado a tu asesor y enviado el comprobante de pago, procede a enviar tu pregunta.
+                <br>
+                <strong>3. Espera alrededor de 24 horas:</strong> Después de haber enviado tu pregunta y el comprobante de pago, espera aproximadamente 24 horas. Tu pregunta estará disponible en la plataforma durante el tiempo de tu plan.
+                <br>
+                <strong>4. Disfruta del juego:</strong> ¡Una vez que tu pregunta esté en la plataforma, disfruta del juego y participa en las conversaciones emocionantes que surjan!
+            </p>
+            <a href="#planes" class="button_plan">Destacar Pregunta</a>
+        </div>
+    </details>
+    
+     <details class="custom-details">
+        <summary class="question-heading">
+            <img src="iconos/angulo-derecho.png" alt="Icono Precio" class="icon-small">
+            <h2>¿Destacar preguntas en Preguntor aumenta la visibilidad del negocio?</h2>
+        </summary>
+        <div class="highlighted-question">
+            <h4>Destacar tu pregunta en Preguntor es una estrategia eficaz para aumentar la visibilidad de tu negocio.</h4>
+            <p class="highlighted-question-description">
+                Destacarte te diferencia, generando interacciones positivas y fomentando el crecimiento orgánico. 
+                Es una táctica que combina exposición pagada con autenticidad para impulsar tu presencia de manera eficiente.
+            </p>
+            <a href="#planes" class="button_plan">Destacar Pregunta</a>
+        </div>
+    </details>
+    
+
+
     
 </div>
-  <footer>
-    <!-- Contenido del footer con el logo en el medio -->
-    <div class="footer-content" style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
 
-        <!-- Logo -->
-        <img src="logo.png" alt="Logo de tu empresa">
-
-        <!-- Texto de derechos de autor -->
-        <p>&copy; 2024 Preguntor. Todos los derechos reservados. v1.2.0.1</p>
-    </div>
-</footer>
-
-  </div>
-
-<!-- Enlace al archivo de funciones JavaScript -->
-<script src="preguntor_funciones.js"></script>
-
-
+    <script src="scripts.js"></script>
 </body>
 </html>
