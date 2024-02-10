@@ -190,7 +190,7 @@ th {
 
 .payment-image {
     width: 100%;
-    max-height: 20vh; /* Ajusta la altura según sea necesario */
+    max-height: 10vh; /* Ajusta la altura según sea necesario */
     object-fit: cover; /* Ajusta el modo de ajuste de la imagen */
     margin-right: 10px; /* Espacio entre las imágenes */
 }
