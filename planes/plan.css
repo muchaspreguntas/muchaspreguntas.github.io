@@ -16,7 +16,7 @@ h1,h2{
     color: #000; /*Color de texto*/
     font-family: "Playfair Display", serif; /*tipografia*/
     text-align: center; /*Alineacion de texto*/
-    padding: 1em;
+    padding: 0.5em;
    
 }
 
