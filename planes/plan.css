@@ -1,33 +1,42 @@
+/* Diseño de la etiqueta body*/
 body {
-    font-family: 'Playfair Display', serif;
-    background-color: #eeeded;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 200vh; /* Cambiado de 150vh a 100vh para mejorar la accesibilidad */
+    font-family: 'Playfair Display', serif; /*Fuente de todo el doc.  */
+    background-color: #eeeded; /* Color de fondo */
+    margin: 0; /* Margen de la pagina */
+    padding: 0; /* Elimina el relleno predeterminado */
+    display: flex; /* Modelo de caja flexible */
+    flex-direction: column; /*  Apila los elementos hijso*/
+    align-items: center; /*Centra los elementos de forma horizontal */
+    min-height: 200vh; /* La altura de la pagina */
 }
 
+/* Diseño de selector de clase de .plan*/
 .plan {
-    background-color: #ffffff;
-    padding: 25px; /* Aumentado el padding para un aspecto más espaciado */
-    border-radius: 10px; /* Aumentado el radio del borde para una apariencia más suave */
-    width: 90%;
-    max-width: 300px;
-    text-align: left;
-    margin-top: 30px; /* Aumentado el margen superior para más espacio entre los elementos */
-    min-height: 330px;
-    color: #000; /* Cambiado de rgb(0, 0, 0) a #000 para mayor legibilidad */
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4); /* Ajuste de la sombra para un efecto más sutil */
-    border: 2px solid #000; /* Cambiado el color del borde a negro para mayor contraste */
-    line-height: 1.5; /* Ajuste de la altura de línea para mejorar la legibilidad */
-    transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Agregada transición para efectos suaves al cambiar propiedades */
+    background-color: #ffffff; /* Color de fondo de los elementos con clase .plan*/
+    padding: 3vw; /* espacio entre los elementos del plan*/
+    border-radius: 2vw; /*Radio de los bordes para los elementos de esquinas redondeadas */
+    width: 90%; /*Ancho maximo de los elementos del contenedor principal */
+    max-width: 90%; /* Ancho maximo de los elementos*/
+    text-align: left; /* Alinea texto a la izquierda*/
+    margin-top: 5vw; /*espacio superior entre los elementos */
+    min-height: auto; /* Altura minima de los elementos*/
+    color: #000; /* Color del texto*/ 
+    box-shadow: 0px 0.3vw 0.3vw rgba(0, 0, 0, 0.4);  /* la sombra de los elementos */
+    border: 0.2vw solid #000; /* Bordes solidos y ancho y ancho color negro*/
+    line-height: 1.6; /*Establece la altura de linea del texto */
+    transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Cambios de color en el borde */
+}
+
+/*Regla media para patallas grandes */
+@media (min-width: 768px) {
+    .plan {
+        max-width: 600px; /* Aumentar el ancho para pantallas grandes */
+    }
 }
 
 .plan:hover {
     background-color: #ffffff; /* Cambiado a un tono más claro al hacer hover */
-    border-color: #0300ab;
+    border-color: #0300ab; /* Cambia los bordes del plan*/
 }
 
 h1 {
