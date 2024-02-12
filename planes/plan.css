@@ -13,7 +13,7 @@ body {
 /* Diseño de selector de clase de .plan*/
 .plan {
     background-color: #ffffff; /* Color de fondo de los elementos con clase .plan*/
-    padding: 3vw; /* espacio entre los elementos del plan*/
+    padding: 5vw; /* espacio entre los elementos del plan*/
     border-radius: 2vw; /*Radio de los bordes para los elementos de esquinas redondeadas */
     width: 90%; /*Ancho maximo de los elementos del contenedor principal */
     max-width: 90%; /* Ancho maximo de los elementos*/
