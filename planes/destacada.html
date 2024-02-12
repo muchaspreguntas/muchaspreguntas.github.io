@@ -8,6 +8,7 @@
     <title>Planes</title>
 </head>
 <body>
+    <div class="container">
     <header>
         <nav>
             <div class="logo-container">
@@ -22,33 +23,35 @@
 
     
     <h1>¡Destaca con Preguntas que Inspiren Conversaciones Únicas en Preguntor!</h1>
+    
+    <h2>Planes</h2>
     <div class="plans-container">
         <div id="planes" class="plans-slider">
           <div class="plan" onclick="togglePlan(this)">
             <img src="iconos/exploracion.png" alt="icono Viaje" class="icono">
-            <h5>Exploración</h5>
+            <h3>Exploración</h3>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 3.500 COP</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 7 Dias</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Una (1) Pregunta</p>
-            <a href="https://bit.ly/plandeexploracion">
+            <a href="https://preguntor.github.io/">
               <button id="button_plan" onclick="pay()">¡Comprar ahora!</button>
             </a>
           </div>
     
           <div class="plan" onclick="togglePlan(this)">
             <img src="iconos/conocimiento.png" alt="icono Viaje" class="icono">
-            <h5>Conocimientos</h5>
+            <h3>Conocimientos</h3>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 4.500 COP</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 10 Dias</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Una (1) Pregunta</p>
-            <a href="https://bit.ly/plandeconocimientos">
+            <a href="https://preguntor.github.io/">
               <button id="button_plan" onclick="pay()">¡Comprar ahora!</button>
             </a>
           </div>
     
           <div class="plan" onclick="togglePlan(this)">
             <img src="iconos/cohete.png" alt="icono Viaje" class="icono">
-            <h5>Empresarial</h5>
+            <h3>Empresarial</h3>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Precio:</strong> 25.900 COP</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Tiempo:</strong> 25 Dias</p>
             <p><strong><img src="iconos/controlar.png" alt="Icono Precio" class="icon-small"> Cantidad:</strong> Cinco (5) Preguntas</p>
@@ -57,8 +60,8 @@
             <a href="https://wa.link/wydxta">
                 <button id="button_plan" onclick="pay()">Contactar</button>
               </a>
-              <p></p>
-              <p>¡Aprovecha!</p>
+              <p>Consulta Más Informacion</p>
+              <p>Sin compromiso</p>
           </div>
 
 
@@ -69,7 +72,7 @@
         <button class="next-button" onclick="changePlan(1)">&#10095;</button>
       </div>
 
-      <h4>Metodos de Pago</h4>
+      <h2>Metodos de Pago</h2>
       <div class="payment-container">
           <div class="payment-slider">
               <img src="medios_pago/visa.png" alt="Logo 1" class="payment-image">
@@ -95,7 +98,7 @@
         </p>
     </div>
     
-      <h4>Beneficios</h4>
+      <h2>Beneficios</h2>
     <div class="reasons-container">
         <div class="reason">
             <img src="iconos/estrela.png" alt="Icono 1" class="icon-img">
@@ -114,12 +117,12 @@
         </div>
     </div>
 
-    <h4>Usuarios</h4>
+    <h2>Usuarios</h2>
     <div class="image-container_ejemplo_2">
-        <img src="unic_app1.png" alt="Ejemplo Imagen" class="responsive-image">
+        <img src="unic_app.png" alt="Ejemplo Imagen" class="responsive-image">
     </div>
 
-    <h4>Garantia</h4>
+    <h2>Garantia</h2>
     <div class="highlighted-question">
         <h5>Garantia</h5>
         <p class="highlighted-question-description">
@@ -127,7 +130,7 @@
         </p>
     </div>
 
-    <h4>Ejemplo Para Empresarios</h4>
+    <h2>Ejemplo Para Empresarios</h2>
     <div class="gallery">
         <div class="image-container">
             <img src="explicacion/categoria.png" alt="Imagen 1">
@@ -144,7 +147,7 @@
     </div>
     
 
-      <h4>Compara Los Planes</h4>
+      <h2>Compara Los Planes</h2>
       <table>
         <thead>
             <tr>
@@ -166,7 +169,7 @@
                 <td>1</td>
                 <td>3.500 COP</td>
                 <td>---</td>
-                <td><a href="https://bit.ly/plandeexploracion" class="button_plan">Comprar</a></td>
+                <td><a href="#planes" class="button_plan">Comprar</a></td>
 
             </tr>
             <tr>
@@ -178,7 +181,7 @@
                 <td>1</td>
                 <td>4.500 COP</td>
                 <td>---</td>
-                <td><a href="https://bit.ly/plandeconocimientos" class="button_plan">Comprar</a></td>
+                <td><a href="#planes" class="button_plan">Comprar</a></td>
 
             </tr>
             <tr>
@@ -195,7 +198,7 @@
         </tbody>
     </table>
     
-     <h4>Preguntas Frecuentes</h4>
+     <h2>Preguntas Frecuentes</h2>
      <details class="custom-details">
         <summary class="question-heading">
             <img src="iconos/angulo-derecho.png" alt="Icono Precio" class="icon-small">
@@ -254,5 +257,6 @@
 </div>
 
     <script src="scripts.js"></script>
+</div>
 </body>
 </html>

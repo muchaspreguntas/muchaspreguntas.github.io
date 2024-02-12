@@ -1,3 +1,4 @@
+
 /* Diseño de la etiqueta body*/
 body {
     font-family: 'Playfair Display', serif; /*Fuente de todo el doc.  */
@@ -10,10 +11,53 @@ body {
     min-height: 200vh; /* La altura de la pagina */
 }
 
+/*Estilos en comun de los diferentes texto*/
+h1,h2{
+    color: #000; /*Color de texto*/
+    font-family: "Playfair Display", serif; /*tipografia*/
+    text-align: center; /*Alineacion de texto*/
+    padding: 1em;
+   
+}
+
+/*Estilos especiales a cada h*/
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+}
+
+h3 {
+    color: #000;
+    font-family: "Playfair Display", serif;
+    font-size: 2em;
+    text-align: left;
+}
+
+/* Consulta de medios para pantallas más pequeñas en la tipografia*/
+@media screen and (max-width: 250px) {
+    h1 {
+        font-size: 2.7em; /* Tamaño de fuente mas pequeño en pantallas mas pequeñas*/
+        padding: 1em 5em /*Margen en telefonos de texto*/
+    }
+    h2 {
+        font-size: 2;
+        padding: 1em 5em;
+    }
+    h3 {font-size:1.5;
+        padding: 1em 3em;
+        text-align: left;
+
+    }
+}
+ 
 /* Diseño de selector de clase de .plan*/
 .plan {
     background-color: #ffffff; /* Color de fondo de los elementos con clase .plan*/
-    padding: 5vw; /* espacio entre los elementos del plan*/
+    margin: 0.5vw; /*Espacio fuera de los planes*/
+    padding: 2vw; /* espacio entre los elementos dentro del plan*/
     border-radius: 2vw; /*Radio de los bordes para los elementos de esquinas redondeadas */
     width: 90%; /*Ancho maximo de los elementos del contenedor principal */
     max-width: 90%; /* Ancho maximo de los elementos*/
@@ -27,77 +71,17 @@ body {
     transition: background-color 0.3s, border-color 0.3s, transform 0.3s; /* Cambios de color en el borde */
 }
 
-/*Regla media para patallas grandes */
-@media (min-width: 768px) {
-    .plan {
-        max-width: 600px; /* Aumentar el ancho para pantallas grandes */
-    }
-}
-
 .plan:hover {
     background-color: #ffffff; /* Cambiado a un tono más claro al hacer hover */
     border-color: #0300ab; /* Cambia los bordes del plan*/
 }
 
-h1 {
-    color: #000;
-    font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    text-align: center;
-    letter-spacing: 0px;
-    margin-top: 20px; /* Aumentado el margen superior para más espacio entre los elementos */
-    margin-bottom: 20px; /* Aumentado el margen inferior para más espacio entre los elementos */
+/*Regla media para patallas pequeñas */
+@media (min-width: 250px) {
+    .plan {
+        max-width: 800px;
+    }
 }
-
-h2 {
-    background-color: #ffffff;
-    font-family: 'Playfair Display', serif;
-    font-weight: bold;
-    color: #000;
-    padding: 15px 20px; /* Aumentado el padding para un aspecto más espaciado */
-    border: 2px solid #ffffff;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 20px;
-    margin-top: 20px; /* Aumentado el margen superior para más espacio entre los elementos */
-    margin-bottom: 20px; /* Aumentado el margen inferior para más espacio entre los elementos */
-    text-align: center;
-    transition: background-color 0.3s, color 0.3s, border-color 0.3s, transform 0.3s;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-h3 {
-    font-family: 'Roboto', sans-serif;
-    color: #000;
-    font-size: 18px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-align: center;
-    transition: color 0.3s;
-}
-
-h5 {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    font-size: 20px;
-}
-
-h6 {
-    color: #000;
-    font-family: 'Roboto', sans-serif;
-    text-align: left;
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 30px;
-    margin-top: 20px; /* Aumentado el margen superior para más espacio entre los elementos */
-    margin-bottom: 20px; /* Aumentado el margen inferior para más espacio entre los elementos */
-}
-
-
- 
 
 
 p strong {
