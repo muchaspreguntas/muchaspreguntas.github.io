@@ -37,7 +37,7 @@ h3 {
 }
 
 /* Consulta de medios para pantallas más pequeñas en la tipografia*/
-@media screen and (max-width: 250px) {
+@media screen and (max-width: 780px) {
     h1 {
         font-size: 2em; /* TamaÃ±o de fuente mas pequeÃ±o en pantallas mas pequeÃ±as*/
         padding: 1em 6em /*Margen en telefonos de texto*/
@@ -77,7 +77,7 @@ h3 {
 }
 
 /*Regla media para patallas pequeñas */
-@media (min-width: 250px) {
+@media (min-width: 780px) {
     .plan {
         max-width: 800px;
     }
