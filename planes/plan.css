@@ -39,14 +39,14 @@ h3 {
 /* Consulta de medios para pantallas más pequeñas en la tipografia*/
 @media screen and (max-width: 250px) {
     h1 {
-        font-size: 2.7em; /* Tamaño de fuente mas pequeño en pantallas mas pequeñas*/
-        padding: 1em 5em /*Margen en telefonos de texto*/
+        font-size: 2em; /* TamaÃ±o de fuente mas pequeÃ±o en pantallas mas pequeÃ±as*/
+        padding: 1em 6em /*Margen en telefonos de texto*/
     }
     h2 {
-        font-size: 2;
+        font-size: 1.7em;
         padding: 1em 5em;
     }
-    h3 {font-size:1.5;
+    h3 {font-size:1.5em;
         padding: 1em 3em;
         text-align: left;
 
