@@ -86,6 +86,66 @@ h4 {
 .etica { color: #993366; }
 .sexo { color: #cc33ff; }
 
+/*----------*/
+
+/* Estilos para el botón de respuesta */
+#showAnswerBoxButton {
+  background-color: #ffffff;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  color: #000000;
+  padding: 10px 20px;
+  border: 2px solid #000000;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Alinea a la derecha */
+  margin-right: auto; /* Alinea a la izquierda */
+}
+
+/* Estilos para el icono de flecha */
+#showAnswerBoxButton span {
+  margin-right: 5px;
+}
+
+/* Estilos caja de respueta cuando hacen click */
+#showAnswerBoxButton:active {
+  border-color: #00ff00; /* Color verde para los bordes */
+}
+
+/* Estilos para la caja de texto de respuesta */
+#answerBoxContainer {
+  margin-top: 5px;
+  width: auto; /* Ancho al 100% */
+  margin-left: auto; /* Alinea a la derecha */
+  margin-right: auto; /* Alinea a la izquierda */
+}
+
+/* Estilos para la caja de texto de respuesta */
+#answerBox {
+  background-color: #fff;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 5px;
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  line-height: 1.5;
+  width: auto; /* Ancho al 100% */
+  transition: border-color 0.3s; /* Transición del color del borde */
+}
+
+/* Estilos para cambiar el color del borde cuando se escribe algo */
+#answerBox:hover {
+  border-color: #00ff00; /* Cambia el color del borde al verde cuando la caja está enfocada */
+}
+/*🔴*/
 
 /* Estilos para los botones de la página */
 button {
@@ -313,63 +373,3 @@ nav a:hover {
 }
 
 
-
-
-
-/*----------*/
-
-/* Estilos para el botón de respuesta */
-#showAnswerBoxButton {
-  background-color: #ffffff;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
-  color: #000000;
-  padding: 10px 20px;
-  border: 2px solid #000000;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  margin-left: auto; /* Alinea a la derecha */
-  margin-right: auto; /* Alinea a la izquierda */
-}
-
-/* Estilos para el icono de flecha */
-#showAnswerBoxButton span {
-  margin-right: 5px;
-}
-
-#showAnswerBoxButton:active {
-  border-color: #00ff00; /* Color verde para los bordes */
-}
-/* Estilos para la caja de texto de respuesta */
-#answerBoxContainer {
-  margin-top: 5px;
-  width: auto; /* Ancho al 100% */
-  margin-left: auto; /* Alinea a la derecha */
-  margin-right: auto; /* Alinea a la izquierda */
-}
-
-/* Estilos para la caja de texto de respuesta */
-#answerBox {
-  background-color: #fff;
-  padding: 10px;
-  border: 2px solid #000000;
-  border-radius: 5px;
-  font-family: 'Playfair Display', serif;
-  font-size: 16px;
-  line-height: 1.5;
-  width: auto; /* Ancho al 100% */
-  transition: border-color 0.3s; /* Transición del color del borde */
-}
-
-/* Estilos para cambiar el color del borde cuando se escribe algo */
-#answerBox:focus {
-  border-color: #00ff00; /* Cambia el color del borde al verde cuando la caja está enfocada */
-}
