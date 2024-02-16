@@ -36,7 +36,7 @@ h1 {
 /*Estilos de pregunta*/
 h2 {
   font-size: 25px;
-  font-family:'Playfair Display';
+  font-family:'Playfair Display', serif;
   border-radius: 0px;
   padding: 5px 10px;
   cursor: pointer;
@@ -276,7 +276,6 @@ footer.hidden {
   transform: translateY(100%);
 }
 
-
 /* Animación de entrada */
 @keyframes fadeInUp {
   from {
@@ -294,31 +293,27 @@ img {
   max-height: 50px; /* Ajusta el tamaño del logo según tus preferencias */
 }
 
-
+/*Estrucuta los elemento nav*/
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-
+/*Estilos para nav a*/
 nav a {
   text-decoration: none;
   color: #000000; /* Color del texto de los enlaces */
   font-weight: bold;
 }
 
+/*Estilos para nav a pero cuando lo aprietan*/
 nav a:hover {
   text-decoration: underline; /* Efecto de subrayado al pasar el mouse sobre los enlaces */
 }
-hr {
-  border: 1px solid #000000; /* Puedes ajustar el color de la línea según tu preferencia */
-  width: 100%;
-  margin: 15px 0; /* Espaciado por encima y por debajo de la línea */
-}
 
 
-/*header*/
+
 
 
 /*----------*/
