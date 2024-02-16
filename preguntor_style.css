@@ -135,13 +135,14 @@ button:hover {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-/* Estilo para el botón al pasar el ratón */
+/* Estilo para el botón de compartir al pasar el ratón */
 #shareSelectButton:hover {
   background-color: #ffffff;
   color: #000000;
   border-color: #0300ab;
 }
 
+/*Estilos del link de las preguntas destacadas*/
 a {
   transition: background-color 0.3s;  /* Transición suave del color de fondo */
 }
@@ -150,7 +151,6 @@ a {
 a:hover {
   color: #000000;
 }
-
 
 /* Estilo para el botón de selección de tema y para el menú desplegable */
 #themeSelectButton, #themeSelect {
@@ -176,12 +176,46 @@ a:hover {
   border-color: #00ff00;
 }
 
-/* Estilo para el menú desplegable */
+header.hidden {
+  transform: translateY(-100%); /*Se movera hacia arriba*/
+}
+
+header {
+  background-color: #ffffff;
+  padding: 5px;
+  color: #000000;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  width: 100%;
+  animation: fadeInUp 0.5s ease-out; /*Estilo de animacion para el header*/
+  font-size: 15px;
+  font-family: 'Playfair Display', serif;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  max-width: 100%; 
+  height: auto; /*Alto automatico*/
+  margin-right: 5px;
+}
+
+/*Menu*/
+.menu-icon {
+  font-size: 24px; /*Medidas del icono*/
+  cursor: pointer;
+}
+
+/*Estilos para el menu de navegacion*/
 .nav-links {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: none;
+  display: none; /* Oculta el menú por defecto */
   flex-direction: column;
   position: absolute;
   top: 60px;
@@ -192,14 +226,33 @@ a:hover {
   text-align: center;
 }
 
+/*Estilo para cuando se abra el nav-link o el menu*/
+.nav-links.show {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff; /* Ajusta el fondo del menú desplegable según tu diseño */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
 /* Estilo para los elementos del menú desplegable */
 .nav-links li {
   text-align: center;
   padding: 10px;
 }
 
-header.hidden {
-  transform: translateY(-100%);
+/*Ajuste del estilo en pantallas mas pequeñas*/
+@media only screen and (max-width: 768px) {
+  .nav-links.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
 }
 
 
@@ -267,79 +320,6 @@ hr {
 
 /*header*/
 
-header {
-  background-color: #ffffff;
-  padding: 5px;
-  color: #000000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  animation: fadeInUp 0.5s ease-out;
-  font-size: 15px;
-  font-family: 'Playfair Display', serif;
-}
-
-.logo-container {
-  display: flex;
-  align-items: center;
-}
-
-.logo-container img {
-  max-width: 100%;
-  height: auto;
-  margin-right: 5px;
-}
-
-.menu-icon {
-  font-size: 24px;
-  cursor: pointer;
-}
-
-/* Agrega este estilo para los bordes verdes cuando se presiona el logo */
-.logo-container.active img {
-  border: 2px solid #00ff00; /* Puedes ajustar el color y el ancho del borde */
-}
-
-.nav-links {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: none; /* Oculta el menú por defecto */
-  flex-direction: column;
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  background-color: #ffffff;
-  z-index: 1;
-}
-
-.nav-links li {
-  text-align: center;
-  padding: 10px;
-}
-
-@media only screen and (max-width: 768px) {
-  .nav-links.show {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-}
-
-.nav-links.show {
-  display: flex;
-  flex-direction: column;
-  background-color: #ffffff; /* Ajusta el fondo del menú desplegable según tu diseño */
-  position: absolute;
-  top: 60px;
-  left: 0;
-  width: 100%;
-  z-index: 1;
-}
 
 /*----------*/
 
