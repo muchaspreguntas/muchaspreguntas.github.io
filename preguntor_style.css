@@ -1,35 +1,45 @@
-/* Estilo global para el cuerpo de la página */
+
+/*estilo de la etiqueta body*/
 body {
-  font-family:  'Playfair Display', serif;
-  background-color: #000000;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 150vh;
+  font-family:  'Playfair Display', serif; /*Tipografia para el body*/
+  background-color: #000000; /*Fondo para el body*/
+  margin: 0; /*Marge del body*/
+  padding: 0; /*Espacio dentro de los elementos del body*/
+  display: flex; /*Los elementos de esa caja pueden varias de forma flexible su posicion*/
+  flex-direction: column; /*Los elementos estaran apilados*/
+  align-items: center; /*Alinear el texto al centro*/
+  height: 150vh; /*Largo de pagina*/
 }
 
 /* Estilos para el contenedor principal */
 .container {
   background-color: #FFFFFF;
   padding: 10px;
-  border-radius: 8px;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  margin-top: 10px;
-  min-height: 200px; /
+  border-radius: 8px; /*Esquinas redondeaas*/
+  width: 90%; /*Esto ocupara el 90% del espacio del contenedor*/
+  max-width: 400px; /*Ancho maximo*/
+  text-align: center; /*Texto centrado*/
+  margin-top: 10px; /*Marge espacio arriba*/
+  min-height: 200px; / /*Alura minima del contenedor*/
 }
 
 /* Estilos para el título principal */
 h1 {
   color: #FFFFFF;
   font-family:  'Playfair Display', serif;
-  font-size: 30px;
+  font-size: 30px; /*Tamaño de fuente*/
   text-align: center;
-  letter-spacing: 0px;
-  margin-bottom: 0px;
+  letter-spacing: 0px; /*Espacio entre las letras*/
+  margin-bottom: 0px; /*Espacio de los margenes del boton*/
+}
+
+h2 {
+  font-size: 25px;
+  font-family:'Raleway', sans-serif;
+  border-radius: 0px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s, border 0.3s;
 }
 
 /* Estilos para el subtítulo */
@@ -43,14 +53,7 @@ h4 {
 }
 
 /* Estilos para las preguntas */
-h2 {
-  font-size: 25px;
-  font-family: 'Playfair Display', serif;
-  border-radius: 0px;
-  padding: 5px 10px;
-  cursor: pointer;
-  transition: background-color 0.3s, color 0.3s, border 0.3s;
-}
+
 
 /* Estilos para la categoría de la pregunta */
 h3 {
