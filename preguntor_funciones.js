@@ -419,7 +419,7 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-/**Funcion: Siguiente Pregunta */ 🟣🟣🟣🟣 Aqui estai
+/**Funcion: Siguiente Pregunta * 🟣🟣🟣🟣 Aqui estai/** */
 // Función para mostrar la siguiente pregunta
 function nextQuestion() {
   const selectedTheme = document.getElementById('themeSelect').value;
