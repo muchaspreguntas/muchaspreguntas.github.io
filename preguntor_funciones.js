@@ -529,7 +529,7 @@ function compartirPregunta() {
   var pregunta = document.getElementById("question").innerText;
 
   // Crear el mensaje para compartir
-  var mensaje = "¡Juguemos con Preguntor! Echa un vistazo a esta interesante pregunta en Preguntor:\n\n" + document.getElementById("respuesta").value + "\n\n" + "Enlace: ";
+  var mensaje = "¡Juguemos con Preguntor! Echa un vistazo a esta interesante pregunta en Preguntor:\n\n" + document.getElementById("answerBoxContainer").value + "\n\n" + "Enlace: ";
 
 
   // Verificar si el navegador admite la API de compartir
