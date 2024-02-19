@@ -419,31 +419,46 @@ function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }
 
-/**Funcion: Siguiente Pregunta * 🟣🟣🟣🟣 Aqui estai/** */
+/**Funcion: Siguiente Pregunta /** */
 // Función para mostrar la siguiente pregunta
 function nextQuestion() {
+  //el document.getElementById seleciona el valor del documento html con id de indetificacion themeSelect que es la lista desplegable, fuera de los parentesis hay un value que indica el que el themeSelect es un value//
   const selectedTheme = document.getElementById('themeSelect').value;
 
   // Verifica si se seleccionó 'todos'
+  //Se le dice que pasa si selecciona todo, que seria todo los temas//
+  //la funcion se compara si es === y se pone el operado ? condicional ternario//
   const themesToSelect = selectedTheme === 'todos' ? themes : [selectedTheme];
 
-  // Selecciona aleatoriamente un tema
+//**Selecionar preguntas */
+
+  //**  Selecciona aleatoriamente un tema**//
+  //La costante de const con el nombre randomThemeIndex que es igual a Math.floor que es un objeto para usar funciones matematicas,floor es una funcion para redondear numeros. Random es otro metodo que devuelve un numero psudoaleatorio entre el [0 y el 1], para themesToSelect es el numero total y su longitud de lista.
   const randomThemeIndex = Math.floor(Math.random() * themesToSelect.length);
+  //**Selecciona la pregunta **//
+  //randomQuestionIndex almacena el //
   const randomTheme = themesToSelect[randomThemeIndex];
 
-  // Selecciona aleatoriamente una pregunta del tema elegido
+  //** Selecciona aleatoriamente una pregunta del tema elegido**// 
+  //Se elige una pregunta aleatorioa del tema elegiodo, //
+  //Genera un indice aletaorio dentro del rango de preguntas disponbles//
   const randomQuestionIndex = Math.floor(Math.random() * questions[randomTheme].length);
 
-  // Muestra la categoría y la pregunta en el contenedor
+  //** */ Muestra la categoría y la pregunta en el contenedor**//
+  // dentro del valor de document.getElementById() le dicde que tome los valores dentro de category
   const categoryElement = document.getElementById('category');
+  //Aqui que tome los valores dentro de questiosn//
   const questionElement = document.getElementById('question');
 
+  //Esto aplica el diseño a category para que cambie de color en el HTML y que empieze por mayuscula//
   categoryElement.className = `category ${randomTheme}`;
   categoryElement.innerHTML = capitalizeFirstLetter(randomTheme);
 
+  //Muestra una pregunta especifica en un elemento HTML de clor de la categoria
   questionElement.innerHTML = questions[randomTheme][randomQuestionIndex];
   questionElement.style.setProperty('--category-color', getComputedStyle(categoryElement).color);
 
+  //Funciones en javascript//
   // Reproduce el audio
   playAudio();
 
@@ -454,6 +469,7 @@ function nextQuestion() {
 // Función para reproducir el audio
 function playAudio() {
   const audio = new Audio(audioUrl);
+  //Play para reproducir el audio//
   audio.play();
 }
 
@@ -465,6 +481,7 @@ function vibrateDevice() {
   }
 }
 
+//Caraterisitcas del header//
 document.querySelector('.menu-icon').addEventListener('click', function() {
   document.querySelector('.nav-links').classList.toggle('show');
 });
@@ -512,7 +529,7 @@ function compartirPregunta() {
   var pregunta = document.getElementById("question").innerText;
 
   // Crear el mensaje para compartir
-  var mensaje = "¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + "Enlace: ";
+  var mensaje = "¡Juguemos con Preguntor ¡Echa un vistazo a esta interesante pregunta en Preguntor!\n\n" + pregunta + "\n\n" + document.getElementById("respuesta").value + "\n\n" + "Enlace: ";
 
   // Verificar si el navegador admite la API de compartir
   if (navigator.share) {
@@ -529,7 +546,7 @@ function compartirPregunta() {
   }
 }
 
-//Caja//
+//Caja para respuestas//
 function toggleAnswerBox() {
   var answerBoxContainer = document.getElementById("answerBoxContainer");
   answerBoxContainer.style.display = (answerBoxContainer.style.display === "none") ? "block" : "none";
