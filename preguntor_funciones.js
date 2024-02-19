@@ -1,4 +1,8 @@
-// Javascript de Preguntor
+// **Javascript de Preguntor**//
+//Se definen unas constantes para el proyecto, temas y preguntas//
+//Luego se crean las funciones como capitalizeFirstLetter y nexquestion//
+//Las funciones del menu, header y footer//
+//Tambien las funcion de compartir pregutas//
 
 //Costantes de proyecto: Comienzo //
   // Definición de temas disponibles

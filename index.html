@@ -2,11 +2,14 @@
 <html lang="es">
 <head>
   <!-- Configuración básica del documento -->
+  <!-- Icono de pagina-->
   <link rel="icon" type="image/png" href="precios/images/logotipo.png">
+  <!-- Configurar carateres especiales del idioma español -->
   <meta charset="UTF-8">
+  <!--Ancho de la pagina y sus ajustes -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titulo-->
   <title>preguntor</title>
-
   <!-- Enlace a la hoja de estilos externa -->
   <link rel="stylesheet" type="text/css" href="preguntor_style.css">
 
@@ -17,15 +20,17 @@
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-ML5NSC6C');</script>
     <!-- End Google Tag Manager -->
-
-
 </head>
-
+ <!--Etiqueta del cuerpo de la pagina, todo el contenido visible -->
 <body>
+ <!--Header de la pagina -->
   <header>
+   <!-- Div para el contenedor, clase para su tipo-->
     <div class="logo-container">
-      <img src="precios/images/logo.png" alt="Logo de tu sitio">
+       <!--etiqueta para insertar imagen, src para buscar el archivo, alt para mostrar un texto alternativo si no carga correctamente -->
+      <img src="precios/images/logo.png" alt="Conexion de Mala calidad">
     </div>
+     <!--Seccion de enlaces a otras paginas-->
     <nav>
       <ul class="nav-links">
         <li><a href="https://preguntor.github.io/precios/index">¡Deja Tu pregunta!</a></li>
@@ -35,18 +40,17 @@
         <li><a href="https://github.com/preguntor/preguntor.github.io">Un Juego de Codigo Abierto</a></li>
         <li><a href="https://www.linkedin.com/in/kristianmartinezcolina/">Linkedin De Founder </a></li>
       </ul>
+       <!--Etiqueta de menu y su caracter -->
       <div class="menu-icon">&#9776;</div>
     </nav>
   </header>
-  <!-- Modificado el código del menú en el header -->
 
-      <!-- ... (tus elementos de la lista) ... -->
-  
-
-
+   <!-- Contenido de la pagina-->
   <!-- Encabezado del cuerpo de la página -->
   <h1>Preguntor</h1>
+   <!-- Descripcion del juego-->
   <h4>Juego de Preguntas. Crea Conexiones con las Personas a traves de Conversaciones Interesantes</h4>
+  
   <!-- Elemento de audio para el sonido del botón -->
   <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
 
@@ -77,12 +81,13 @@
       </select>
       <!-- Título de la pregunta -->
       <h3>Pregunta:</h3>
+       <!--Categoria de pregunta -->
         <h4 id="category" class="category amor"> Amor</h4>
+         <!-- Pregunta que se mostrara-->
       <h2 id="question"> 1. ¿Cómo influyen tus experiencias familiares en tu percepción del amor?
       </h2>
     </div>
 
-    <!--0000000-->
 <!-- Botón para mostrar u ocultar la caja de texto -->
 <button id="showAnswerBoxButton" onclick="toggleAnswerBox()">
   <span>&#x25BC;</span> Escribir Respuesta
@@ -91,27 +96,28 @@
 <!-- Contenedor de la caja de texto (inicialmente oculto) -->
 <div id="answerBoxContainer" style="display: none;">
   <!-- Caja de texto para escribir la respuesta -->
-  <div id="answerBox" contenteditable="true" placeholder="Escribe tu respuesta aquí..." style="background-color:#fff; padding: 10px; border: 2px solid #000000; border-radius: 5px; font-family: 'Playfair Display', serif; font-size: 16px; line-height: 1.5; width: auto;"></div>
+  <div id="answerBox" contenteditable="true" placeholder="...." style="background-color:#fff; padding: 10px; border: 2px solid #000000; border-radius: 5px; font-family: 'Playfair Display', serif; font-size: 16px; line-height: 1.5; width: auto;"></div>
 </div>
 <!--0000000-->
 
     <!-- Botón para la siguiente pregunta (con llamada a función JavaScript) -->
     <button onclick="nextQuestion()">Siguiente Pregunta</button>
+     <!--Boton para compartir pregunta -->
     <button id="shareSelectButton" onclick="compartirPregunta()">Compartir</button>
     
 </div>
+
+ <!--Pie de pagina -->
   <footer>
     <!-- Contenido del footer con el logo en el medio -->
     <div class="footer-content" style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
-
         <!-- Logo -->
         <img src="precios/images/logo.png" alt="Logo de tu empresa">
 
         <!-- Texto de derechos de autor -->
-        <p>&copy; 2024 Preguntor. Todos los derechos reservados. v1.2.0.1</p>
+        <p>&copy; 2024 Preguntor. Todos los derechos reservados. v1.0.0.0</p>
     </div>
 </footer>
-
   </div>
 
 <!-- Enlace al archivo de funciones JavaScript -->
