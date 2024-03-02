@@ -216,13 +216,8 @@ button:hover {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-#publicar_pregunta_link:hover {
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #00ff00;
-}
 
-.sugerencia_boton {
+.sugerencia_boton #sugerencia_boton {
   background-color: #ffffff;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
@@ -238,11 +233,6 @@ button:hover {
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
-.sugerencia_boton:hover{
-  background-color: #ffffff;
-  color: #000000;
-  border-color: #00ff00;
-}
 
 
 
