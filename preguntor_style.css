@@ -182,11 +182,11 @@ button:hover {
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   color: #000000;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: 2px solid #000000;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
@@ -202,35 +202,44 @@ button:hover {
 
 .publicar_pregunta_link #publicar_pregunta_boton {
   background-color: #ffffff;
-  font-family: 'Playfair Display', serif;
-  font-weight: bold;
+  font-family:  'Playfair Display', serif;
+  font-weight: bold; /*letra mas gruesa*/
   color: #000000;
-  padding: 5px 10px;
-  border: 2px solid #000000;
+  padding: 10px 20px;
+  border: 2px solid #000000; /* Cambiado para especificar el tipo de borde */
   border-radius: 4px;
-  cursor: pointer;
-  font-size: 8px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
-  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  cursor: pointer;/*Cambiar el cursos a una manito*/
+  font-size: 16px;
+  margin-top: 15px;
+  transition: background-color 0.3s, color 0.3s;
 }
-
+.publicar_pregunta_link #publicar_pregunta_boton:hover {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #00ff00;
+}
 
 .sugerencia_boton #sugerencia_boton {
   background-color: #ffffff;
   font-family: 'Playfair Display', serif;
   font-weight: bold;
   color: #000000;
-  padding: 5px 10px;
+  padding: 5px 5px;
   border: 2px solid #000000;
   border-radius: 4px;
   cursor: pointer;
-  font-size: 8px;
+  font-size: 12px;
   margin-top: 10px;
   margin-bottom: 10px;
   text-align: center;
   transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* Estilo para el botón de compartir al pasar el ratón */
+.sugerencia_boton #sugerencia_boton {
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #00ff00;
 }
 
 
