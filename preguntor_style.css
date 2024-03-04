@@ -223,7 +223,7 @@ button:hover {
 .icon-button{
   width:30px;
   height: 30px;
-  background-image: url("");
+  background-image: url("iconos_generales/compartir.png");
   background-size: cover;
 }
 
