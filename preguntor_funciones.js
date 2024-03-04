@@ -558,26 +558,3 @@ function toggleAnswerBox() {
 }
 
 
-
-//Boton de capture de pantalla 
-// Crear el botón
-const button = document.createElement('button');
-button.textContent = 'Tomar Captura de Pantalla';
-document.body.appendChild(button);
-
-// Agregar un evento de clic al botón
-button.addEventListener('click', function() {
-    tomarCapturaPantalla();
-});
-
-// Definir la función para tomar la captura de pantalla
-function tomarCapturaPantalla() {
-    const gameArea = document.getElementById('gameArea');
-    html2canvas(gameArea).then(function(canvas) {
-        // Crear un enlace de descarga para la captura de pantalla
-        const link = document.createElement('a');
-        link.download = 'captura_pantalla.png';
-        link.href = canvas.toDataURL();
-        link.click();
-    });
-}
