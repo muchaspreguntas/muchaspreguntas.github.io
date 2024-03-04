@@ -558,3 +558,32 @@ function toggleAnswerBox() {
 }
 
 
+
+//Boton de capture de pantalla 
+document.getElementById('screenshotButton').addEventListener('click', function() {
+  tomarCapturaPantalla();
+});
+
+function tomarCapturaPantalla() {
+  // Obtener el área del juego que quieres capturar (puedes ajustar esto según tu juego)
+  const gameArea = document.getElementById('gameArea');
+
+  // Crear un lienzo (canvas) del mismo tamaño que el área del juego
+  const canvas = document.createElement('canvas');
+  canvas.width = gameArea.offsetWidth;
+  canvas.height = gameArea.offsetHeight;
+
+  // Obtener el contexto 2D del canvas
+  const ctx = canvas.getContext('2d');
+
+  // Dibujar el área del juego en el canvas
+  ctx.drawImage(gameArea, 0, 0, canvas.width, canvas.height);
+
+  // Crear un enlace de descarga para la captura de pantalla
+  const link = document.createElement('a');
+  link.download = 'captura_pantalla.png'; // Nombre del archivo de la captura de pantalla
+  link.href = canvas.toDataURL(); // Convertir el canvas a una URL de datos
+
+  // Simular un clic en el enlace para iniciar la descarga
+  link.click();
+}
