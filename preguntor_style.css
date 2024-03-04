@@ -220,13 +220,6 @@ button:hover {
   border-color: #00ff00;
 }
 
-.icon-button{
-  width:30px;
-  height: 30px;
-  background-image: url("iconos_generales/compartir.png");
-  background-size: cover;
-}
-
 .sugerencia_boton #sugerencia_boton {
   background-color: #ffffff;
   font-family: 'Playfair Display', serif;
