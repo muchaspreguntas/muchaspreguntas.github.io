@@ -165,6 +165,7 @@ button {
 /* Estilos para el efecto hover en los botones */
 button:hover {
   background-color: #0de914;
+  border: 2px solid #0de914;
   color: #000000;
 }
 
