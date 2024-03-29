@@ -1,0 +1,138 @@
+!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Configuración básica del documento -->
+  <!-- Icono de pagina-->
+  <link rel="icon" type="image/png" href="precios/images/logotipo.png">
+  <!-- Configurar carateres especiales del idioma español -->
+  <meta charset="UTF-8">
+  <!--Indicar a los motores de busqueda que rastreen el contenido de la pagina-->
+<meta name = "robots" content="index, follow"
+  <!--Descripcion de la pagina para buscadores-->
+  <meta name ="decription" content="Juego de Preguntas. Crea conexiones a traves preguntas interesantes."/>
+  <!--Ancho de la pagina y sus ajustes -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Titulo-->
+  <title>Preubas_preguntor_</title>
+  <!-- Enlace a la hoja de estilos externa -->
+  <link rel="stylesheet" type="text/css" href="preguntor_style.css">
+</head>
+ <!--Etiqueta del cuerpo de la pagina, todo el contenido visible -->
+<body>
+ <!--Header de la pagina -->
+  <header>
+   <!-- Div para el contenedor, clase para su tipo-->
+    <div class="logo-container">
+       <!--etiqueta para insertar imagen, src para buscar el archivo, alt para mostrar un texto alternativo si no carga correctamente -->
+      <img src="precios/images/logo.png" alt="Conexion de Mala calidad">
+    </div>
+     <!--Seccion de enlaces a otras paginas-->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="https://preguntor.github.io/precios/index">¡Deja Tu pregunta!</a></li>
+        <li><a href="https://zinc-climb-c0a.notion.site/Reglas-de-Preguntor-b31f21a596d549559b671b83966f3a9d?pvs=4">Reglas</a></li>
+        <li><a href="https://zinc-climb-c0a.notion.site/Historia-de-Pregunton-ee4348144752467681523696789fa17b?pvs=4">Historia</a></li>
+        <li><a href="https://forms.gle/gZsbmRtreD2pjVDo6">Mejora El Juego</a></li>
+        <li><a href="https://lookerstudio.google.com/reporting/eaa2e9be-680e-44cd-9f66-48fab5f01a5a">Datos de Preguntor</a></li>
+        <li><a href="https://github.com/preguntor/preguntor.github.io">Un Juego de Codigo Abierto</a></li>
+        <li><a href="https://www.linkedin.com/in/kristianmartinezcolina/">Linkedin De Founder </a></li>
+      </ul>
+       <!--Etiqueta de menu y su caracter -->
+      <div class="menu-icon">&#9776;</div>
+    </nav>
+  </header>
+
+   <!-- Contenido de la pagina-->
+  <!-- Encabezado del cuerpo de la página -->
+  <h1>⚠️PRUEBAS ⚠️Crea conexiones a través de preguntas</h1>
+   <!-- Descripcion del juego-->
+  <h4>1) Buscas a alguien → 2) Eliges el tema. → 3) Haces la pregunta. </h4>
+  
+  <!-- Elemento de audio para el sonido del botón -->
+  <audio id="audio" src="audio_boton_siguiente.mp3"></audio>
+
+  <!-- Contenedor principal de la página -->
+  <div class="container">
+    <!-- Contenedor de la pregunta -->
+    <div id="questionContainer">
+      <!-- Categoría de la pregunta (con clase CSS dinámica) -->
+      <select id="themeSelect" title="Selecciona un tema">
+        <option value="amor">Amor</option>
+        <option value="ciencia">Ciencia</option>
+        <option value="desarrollo">Desarrollo</option>
+        <option value="economia">Economía</option>
+        <option value="educacion">Educación</option>
+        <option value="etica">Ética</option>
+        <option value="filosofia">Filosofía</option>
+        <option value="historia">Historia</option>
+        <option value="vivencias">Vivencias</option>
+        <option value="miedos">Miedos</option>
+        <option value="negocios">Negocios</option>
+        <option value="pareja">Pareja</option>
+        <option value="politica">Política</option>
+        <option value="psicologia">Psicología</option>
+        <option value="religion">Religión</option>
+        <option value="tecnologia">Tecnología</option>
+        <option value="sexo">Sexo</option>
+        <option value="todos">Todos los temas</option>
+      </select>
+      <!-- Título de la pregunta -->
+      <h3>Pregunta:</h3>
+       <!--Categoria de pregunta -->
+        <h4 id="category" class="category amor"> Amor</h4>
+         <!-- Pregunta que se mostrara-->
+      <h2 id="question"> 1. ¿Cómo influyen tus experiencias familiares en tu percepción del amor?
+      </h2>
+    </div>
+
+<!-- Botón para mostrar u ocultar la caja de texto -->
+<button id="showAnswerBoxButton" onclick="toggleAnswerBox()">
+  <span>&#x25BC;</span> Escribir Respuesta
+</button>
+
+<!-- Contenedor de la caja de texto (inicialmente oculto) -->
+<div id="answerBoxContainer" style="display: none;">
+  <!-- Caja de texto para escribir la respuesta -->
+  <div id="answerBox" contenteditable="true" placeholder="...." style="background-color:#fff; padding: 10px; border: 2px solid #000000; border-radius: 5px; font-family: 'Playfair Display', serif; font-size: 16px; line-height: 1.5; width: auto;"></div>
+</div>
+<!--0000000-->
+
+    <!-- Botón para la siguiente pregunta (con llamada a función JavaScript) -->
+    <button onclick="nextQuestion()">Siguiente Pregunta</button>
+    <!--Boton para landing page -->
+    <a href="https://preguntor.github.io/precios/index" target="_blank" class="publicar_pregunta_link">
+      <button id="publicar_pregunta_boton">Publicar Pregunta</button>
+    </a>
+
+    <!--Botones secundarios-->
+    <div style="display: block;">
+      <!--Boton para compartir pregunta -->
+      <button id="shareSelectButton" onclick="compartirPregunta()">Compartir</button>
+      <!--Boton para Feedback -->
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSd_3MSQEnL9Nu_lY7TCc7isqfznTEx_XecnGJRph_j5aMmctA/viewform" target="_blank" class="sugerencia_boton">
+        <button id="sugerencia_boton">Sugerencia</button>
+    </a>
+  </div>
+  
+</div>
+
+ <!--Pie de pagina -->
+  <footer>
+    <!-- Contenido del footer con el logo en el medio -->
+    <div class="footer-content" style="display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center;">
+        <!-- Logo -->
+        <img src="precios/images/logo.png" alt="Logo de tu empresa">
+
+        <!-- Texto de derechos de autor -->
+        <p>&copy; 2024 Preguntor. Todos los derechos reservados. v1.0.0.0 ⚠️⚠️PRUEBAS </p>
+    </div>
+</footer>
+  </div>
+
+<!-- Enlace al archivo de funciones JavaScript -->
+<script src="preguntor_funciones.js"></script>
+
+<!--Permiso para capture-->
+
+</body>
+</html>
